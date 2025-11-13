@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Falk" behavior="falk.npc" walkradius="3" walkinterval="2000" speed="3" floorchange="0">
+  <look type="131" head="76" body="11" legs="11" feet="76" />
+</npc>

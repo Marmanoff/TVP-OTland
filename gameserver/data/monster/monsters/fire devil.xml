@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Fire Devil" nameDescription="a fire devil" race="blood" experience="110" speed="50" manacost="530">
+	<health now="200" max="200" />
+	<look type="40" head="0" body="0" legs="0" feet="0" corpse="2886" />
+	<targetchange chance="50" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag convinceable="1" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="4" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1100" skillnextlevel="100" skilladdcount="1" skill="30" attack="22" />
+		<attack name="fire" delay="4" min="-20" max="-50" range="7" radius="2" target="1">
+			<attribute key="shooteffect" value="fire" />
+			<attribute key="areaeffect" value="firearea" />
+		</attack>
+		<attack name="fire" delay="9" min="-60" max="-90" range="7" radius="4" target="1">
+			<attribute key="shooteffect" value="fire" />
+			<attribute key="areaeffect" value="firearea" />
+		</attack>
+	</attacks>
+	<defenses armor="13" defense="15">
+	</defenses>
+	<immunities>
+		<immunity fire="1" />
+		<immunity energy="0" />
+		<immunity poison="0" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="0" />
+		<immunity invisible="0" />
+	</immunities>
+	<voices>
+		<voice sentence="Hot, eh?" />
+		<voice sentence="Hell, oh hell!" />
+	</voices>
+	<loot>
+		<item id="2191" countmax="1" chance="1"/><!-- red spell wand -->
+		<item id="2050" countmax="2" chance="15000"/><!-- torch -->
+		<item id="2150" countmax="1" chance="300"/><!-- small amethyst -->
+		<item id="2419" countmax="1" chance="6000"/><!-- scimitar -->
+		<item id="2548" countmax="1" chance="50000"/><!-- pitchfork -->
+		<item id="2515" countmax="1" chance="200"/><!-- guardian shield -->
+		<item id="2387" countmax="1" chance="1500"/><!-- double axe -->
+		<item id="2568" countmax="1" chance="9000"/><!-- cleaver -->
+		<item id="2260" countmax="1" chance="11000"/><!-- blank rune -->
+	</loot>
+</monster>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Bashira" behavior="bashira.npc" walkradius="1" walkinterval="2000" speed="6" floorchange="0">
+  <look type="144" head="78" body="62" legs="97" feet="76" />
+</npc>

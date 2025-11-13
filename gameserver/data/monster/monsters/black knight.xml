@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Black Knight" nameDescription="a black knight" race="blood" experience="1600" speed="155" manacost="0">
+	<health now="1800" max="1800" />
+	<look type="131" head="95" body="95" legs="95" feet="95" corpse="3058" />
+	<targetchange chance="3" />
+	<targetstrategy nearest="80" weakest="10" mostdamage="10" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="0" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1200" skillnextlevel="100" skilladdcount="1" skill="88" attack="60" />
+		<attack name="physical" delay="7" min="-145" max="-185" range="7">
+			<attribute key="shooteffect" value="spear" />
+		</attack>
+	</attacks>
+	<defenses armor="42" defense="60">
+	</defenses>
+	<immunities>
+		<immunity fire="1" />
+		<immunity energy="1" />
+		<immunity poison="1" />
+		<immunity physical="0" />
+		<immunity outfit="1" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices>
+		<voice sentence="MINE!" yell="1" />
+		<voice sentence="NO PRISONERS!" yell="1" />
+		<voice sentence="NO MERCY!" yell="1" />
+		<voice sentence="By Bolg's Blood!" />
+		<voice sentence="You're no match for me!" />
+	</voices>
+	<loot>
+		<item id="2475" countmax="1" chance="5000" /><!-- warrior helmet -->
+		<item id="2377" countmax="1" chance="10000" /><!-- two handed sword -->
+		<item id="2457" countmax="1" chance="10000" /><!-- steel helmet -->
+		<item id="2389" countmax="3" chance="30000" /><!-- spear -->
+		<item id="2133" countmax="1" chance="800" /><!-- ruby necklace -->
+		<item id="2120" countmax="1" chance="15000" /><!-- rope -->
+		<item id="2463" countmax="1" chance="10000" /><!-- plate armor -->
+		<item id="2477" countmax="1" chance="1000" /><!-- knight legs -->
+		<item id="2430" countmax="1" chance="2500" /><!-- knight axe -->
+		<item id="2476" countmax="1" chance="1000" /><!-- knight armor -->
+		<item id="2381" countmax="1" chance="13000" /><!-- halberd -->
+		<item id="2148" countmax="90" chance="22200" /><!-- gold coin -->
+		<item id="2148" countmax="60" chance="33300" /><!-- gold coin -->
+		<item id="2414" countmax="1" chance="300" /><!-- dragon lance -->
+		<item id="2490" countmax="1" chance="2000" /><!-- dark helmet -->
+		<item id="2489" countmax="1" chance="2000" /><!-- dark armor -->
+		<item id="2691" countmax="2" chance="20000" /><!-- brown bread -->
+		<item id="2478" countmax="1" chance="13000" /><!-- brass legs -->
+		<item id="2195" countmax="1" chance="500" /><!-- boots of haste -->
+		<item id="2417" countmax="1" chance="7000" /><!-- battle hammer -->
+	</loot>
+</monster>

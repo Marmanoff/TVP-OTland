@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Bozo" behavior="bozo.npc" walkradius="3" walkinterval="2000" speed="4" floorchange="0">
+  <look type="128" head="86" body="93" legs="82" feet="79" />
+</npc>

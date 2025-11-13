@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Jakahr" behavior="jakahr.npc" walkradius="1" walkinterval="2000" speed="10" floorchange="0">
+  <look type="133" head="95" body="37" legs="32" feet="40" />
+</npc>

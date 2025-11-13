@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Wild Warrior" nameDescription="a wild warrior" race="blood" experience="60" speed="55" manacost="420">
+	<health now="135" max="135" />
+	<look type="131" head="38" body="38" legs="38" feet="38" corpse="3058" />
+	<targetchange chance="0" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag illusionable="1" />
+		<flag pushable="1" />
+		<flag convinceable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="10" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1500" skillnextlevel="100" skilladdcount="1" skill="46" attack="16" />
+	</attacks>
+	<defenses armor="9" defense="18">
+		<defense name="speed" delay="17" duration="2000" speed="40" speedvariation="20">
+			<attribute key="areaeffect" value="redshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="0" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="0" />
+		<immunity invisible="0" />
+	</immunities>
+	<voices>
+		<voice sentence="An enemy!" />
+		<voice sentence="Gimme your money!" />
+	</voices>
+	<loot>
+		<item id="2391" countmax="1" chance="100" /><!-- war hammer -->
+		<item id="2509" countmax="1" chance="1000" /><!-- steel shield -->
+		<item id="2666" countmax="1" chance="40000" /><!-- meat -->
+		<item id="2398" countmax="1" chance="10000" /><!-- mace -->
+		<item id="2649" countmax="1" chance="15000" /><!-- leather legs -->
+		<item id="2459" countmax="1" chance="500" /><!-- iron helmet -->
+		<item id="2148" countmax="10" chance="15000" /><!-- gold coin -->
+		<item id="2148" countmax="20" chance="40000" /><!-- gold coin -->
+		<item id="2110" countmax="1" chance="500" /><!-- doll -->
+		<item id="2458" countmax="1" chance="5000" /><!-- chain helmet -->
+		<item id="2511" countmax="1" chance="17000" /><!-- brass shield -->
+		<item id="2465" countmax="1" chance="2500" /><!-- brass armor -->
+		<item id="2386" countmax="1" chance="30000" /><!-- axe -->
+	</loot>
+</monster>

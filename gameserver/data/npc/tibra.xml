@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Tibra" behavior="tibra.npc" walkradius="3" walkinterval="2000" speed="6" floorchange="0">
+  <look type="138" head="60" body="92" legs="90" feet="95" />
+</npc>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Muriel" behavior="muriel.npc" walkradius="2" walkinterval="2000" speed="10" floorchange="0">
+  <look type="130" head="115" body="94" legs="97" feet="57" />
+</npc>

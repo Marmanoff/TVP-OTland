@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Dove" behavior="dove.npc" walkradius="1" walkinterval="2000" speed="10" floorchange="0">
+  <look type="136" head="59" body="86" legs="106" feet="115" />
+</npc>

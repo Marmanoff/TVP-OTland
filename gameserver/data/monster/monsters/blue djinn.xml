@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Blue Djinn" nameDescription="a blue djinn" race="blood" experience="190" speed="70" manacost="0">
+	<health now="330" max="330" />
+	<look type="80" head="0" body="0" legs="0" feet="0" corpse="3001" />
+	<targetchange chance="0" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="0" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="2000" skillnextlevel="100" skilladdcount="1" skill="50" attack="30" />
+		<attack name="outfit" monster="Rabbit" delay="6" duration="20000" range="7">
+			<attribute key="areaeffect" value="blueshimmer" />
+		</attack>
+		<attack name="drunk" duration="30" drunkenness="6" delay="5" range="7">
+			<attribute key="shooteffect" value="energy" />
+			<attribute key="areaeffect" value="teleport" />
+		</attack>
+		<attack name="lifedrain" delay="4" min="-55" max="-105" range="7">
+			<attribute key="shooteffect" value="death" />
+		</attack>
+		<attack name="energycondition" delay="3" cycle="70" mincycle="20" range="7">
+			<attribute key="shooteffect" value="energy" />
+		</attack>
+		<attack name="fire" delay="2" min="-45" max="-75" range="7">
+			<attribute key="shooteffect" value="fire" />
+		</attack>
+	</attacks>
+	<defenses armor="20" defense="30">
+	</defenses>
+	<immunities>
+		<immunity fire="1" />
+		<immunity energy="1" />
+		<immunity poison="1" />
+		<immunity physical="0" />
+		<immunity outfit="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices>
+		<voice sentence="Simsalabim" />
+		<voice sentence="Feel the power of my magic, tiny mortal!" />
+		<voice sentence="Be careful what you wish for." />
+		<voice sentence="Wishes can come true." />
+	</voices>
+	<loot>
+		<item id="2146" countmax="4" chance="2500" /><!-- small sapphire -->
+		<item id="2063" countmax="1" chance="7500" /><!-- small oil lamp -->
+		<item id="2663" countmax="1" chance="100" /><!-- mystic turban -->
+		<item id="2148" countmax="50" chance="70000" /><!-- gold coin -->
+		<item id="2684" countmax="1" chance="25000" /><!-- carrot -->
+		<item id="1978" countmax="1" chance="2500" /><!-- book -->
+		<item id="2745" countmax="1" chance="500" /><!-- blue rose -->
+	</loot>
+</monster>

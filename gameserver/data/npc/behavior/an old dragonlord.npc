@@ -1,0 +1,8 @@
+Behavior = {
+ADDRESS,"hello$",Count(2787)>=1,QuestValue(66)<1,! -> "AHHH MUSHRRROOOMSSS! NOW MY PAIN WILL BE EASSSED FOR A WHILE! TAKE THISS AND LEAVE THE DRAGONSSS' CEMETERY AT ONCE!", Amount=1, Delete(2787), Create(2319), SetQuestValue(66,1), Idle
+ADDRESS,"hi$",Count(2787)>=1,QuestValue(66)<1,!    -> *
+ADDRESS,QuestValue(66)=1,!  -> "LEAVE THE DRAGONS' CEMETERY AT ONCE!", Idle
+
+ADDRESS                            -> "AHHHH THE PAIN OF AGESSS! I NEED MUSSSSHRROOOMSSS TO EASSSE MY PAIN! BRRRING ME MUSHRRROOOMSSS!", Idle
+ADDRESS                            -> *
+}

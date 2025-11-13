@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Humgolf" behavior="humgolf.npc" walkradius="2" walkinterval="2000" speed="3" floorchange="0">
+  <look type="69" head="0" body="0" legs="0" feet="0" />
+</npc>

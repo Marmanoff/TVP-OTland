@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Mahrdis" race="undead" experience="3050" speed="110" manacost="0">
+	<health now="3900" max="3900" />
+	<look type="86" head="0" body="0" legs="0" feet="0" corpse="3016" />
+	<targetchange chance="3" />
+	<targetstrategy nearest="80" weakest="10" mostdamage="10" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="0" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1500" skillnextlevel="100" skilladdcount="1" skill="60" attack="45" poisoncycles="65" />
+		<attack name="firecondition" delay="8" cycle="450" mincycle="50" length="8" spread="3">
+			<attribute key="areaeffect" value="explosionarea" />
+		</attack>
+		<attack name="firefield" delay="9" radius="4" target="0">
+			<attribute key="areaeffect" value="fire" />
+		</attack>
+		<attack name="fire" delay="3" min="-100" max="-800" radius="3" target="0">
+			<attribute key="areaeffect" value="explosion" />
+		</attack>
+		<attack name="speed" delay="8" duration="50000" speed="-90" speedvariation="20" range="7">
+			<attribute key="areaeffect" value="redshimmer" />
+		</attack>
+		<attack name="fire" delay="16" min="-300" max="-600" range="7">
+			<attribute key="shooteffect" value="fire" />
+			<attribute key="areaeffect" value="fire" />
+		</attack>
+		<attack name="firecondition" delay="4" cycle="550" mincycle="250" range="1">
+			<attribute key="areaeffect" value="firearea" />
+		</attack>
+		<attack name="lifedrain" delay="15" min="-50" max="-750" range="1" />
+	</attacks>
+	<defenses armor="40" defense="60">
+		<defense name="healing" delay="5" min="20" max="800">
+			<attribute key="areaeffect" value="fire" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity fire="1" />
+		<immunity energy="0" />
+		<immunity poison="1" />
+		<immunity physical="0" />
+		<immunity outfit="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<summons maxSummons="4">
+		<summon name="Fire Elemental" max="4" delay="9" />
+	</summons>
+	<voices>
+		<voice sentence="Burnnnnnnnnn!" />
+		<voice sentence="Fire, Fire!" />
+		<voice sentence="May my flames engulf you!" />
+		<voice sentence="The eternal flame demands its due!" />
+		<voice sentence="I am hotter than hot." />
+		<voice sentence="Ashes to ashes!" />
+	</voices>
+	<loot>
+		<item id="2147" countmax="3" chance="10000" /><!-- small ruby -->
+		<item id="2156" countmax="1" chance="1000" /><!-- red gem -->
+		<item id="2539" countmax="1" chance="100" /><!-- phoenix shield -->
+		<item id="2168" countmax="1" chance="5000" /><!-- life ring -->
+		<item id="2141" countmax="1" chance="100" /><!-- holy falcon -->
+		<item id="2148" countmax="95" chance="35000" /><!-- gold coin -->
+		<item id="2148" countmax="85" chance="50000" /><!-- gold coin -->
+		<item id="2148" countmax="80" chance="70000" /><!-- gold coin -->
+		<item id="2432" countmax="1" chance="200" /><!-- fire axe -->
+		<item id="2353" countmax="1" chance="100000" /><!-- burning heart -->
+	</loot>
+</monster>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Lion" nameDescription="a lion" race="blood" experience="30" speed="55" manacost="320">
+	<health now="80" max="80" />
+	<look type="41" head="0" body="0" legs="0" feet="0" corpse="2889" />
+	<targetchange chance="0" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag convinceable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="10" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1100" skillnextlevel="100" skilladdcount="1" skill="32" attack="20" />
+	</attacks>
+	<defenses armor="6" defense="13">
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="0" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="0" />
+		<immunity invisible="0" />
+	</immunities>
+	<voices>
+		<voice sentence="Groarrr!" />
+	</voices>
+	<loot>
+		<item id="2666" countmax="3" chance="45000" /><!-- meat -->
+		<item id="2671" countmax="2" chance="20000" /><!-- ham -->
+	</loot>
+</monster>

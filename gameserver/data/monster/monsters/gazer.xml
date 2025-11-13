@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Gazer" nameDescription="a gazer" race="blood" experience="90" speed="30" manacost="0">
+	<health now="120" max="120" />
+	<look type="109" head="0" body="0" legs="0" feet="0" corpse="3049" />
+	<targetchange chance="50" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="4" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1200" skillnextlevel="100" skilladdcount="1" skill="25" attack="9" />
+		<attack name="manadrain" delay="7" min="-5" max="-15" range="7">
+			<attribute key="areaeffect" value="redshimmer" />
+		</attack>
+		<attack name="lifedrain" delay="9" min="-25" max="-35" range="7">
+			<attribute key="areaeffect" value="redshimmer" />
+		</attack>
+	</attacks>
+	<defenses armor="4" defense="15">
+		<defense name="speed" delay="11" duration="4000" speed="99" speedvariation="1">
+			<attribute key="areaeffect" value="redshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="1" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="0" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices>
+		<voice sentence="Mommy!?" />
+		<voice sentence="Buuuuhaaaahhaaaaa!" />
+		<voice sentence="Me need mana!" />
+	</voices>
+	<loot>
+		<item id="2512" countmax="1" chance="3000" /><!-- wooden shield -->
+		<item id="2148" countmax="10" chance="70000" /><!-- gold coin -->
+		<item id="2148" countmax="8" chance="80000" /><!-- gold coin -->
+		<item id="2148" countmax="6" chance="90000" /><!-- gold coin -->
+	</loot>
+</monster>

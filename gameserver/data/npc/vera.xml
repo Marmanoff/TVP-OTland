@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Vera" behavior="vera.npc" walkradius="1" walkinterval="2000" speed="10" floorchange="0">
+  <look type="136" head="59" body="96" legs="115" feet="95" />
+</npc>

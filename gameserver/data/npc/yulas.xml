@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Yulas" behavior="yulas.npc" walkradius="1" walkinterval="2000" speed="10" floorchange="0">
+  <look type="128" head="58" body="43" legs="38" feet="76" />
+</npc>

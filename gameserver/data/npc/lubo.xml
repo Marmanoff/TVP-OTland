@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Lubo" behavior="lubo.npc" walkradius="3" walkinterval="2000" speed="10" floorchange="0">
+  <look type="129" head="38" body="39" legs="96" feet="114" />
+</npc>

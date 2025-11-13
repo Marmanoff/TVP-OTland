@@ -1,0 +1,10 @@
+"table"                -> "Do you want to buy a small table, a round table, a square table or a big table?"
+"small", "table"       -> Type=1619, Amount=1, Price=20, "Do you want to buy a small table for %P gold?", Topic=81
+"round", "table"       -> Type=1616, Amount=1, Price=25, "Do you want to buy a round table for %P gold?", Topic=81
+"square", "table"      -> Type=1615, Amount=1, Price=25, "Do you want to buy a square table for %P gold?", Topic=81
+"big", "table"         -> Type=1614, Amount=1, Price=30, "Do you want to buy a big table for %P gold?", Topic=81
+
+Topic=81,"yes",Premium,CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)
+Topic=81,"yes",CountMoney>=Price         -> "I'm sorry, but you need a premium account if you want to buy furniture."
+Topic=81,"yes"                           -> "Come back, when you have enough money."
+Topic=81                                 -> "Hmm, but I'm sure, it would fit nicely into your house."

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Mehkesh" behavior="mehkesh.npc" walkradius="2" walkinterval="2000" speed="2" floorchange="0">
+  <look type="130" head="19" body="92" legs="113" feet="40" />
+</npc>

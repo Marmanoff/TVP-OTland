@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Crypt Shambler" nameDescription="a crypt shambler" race="undead" experience="195" speed="30" manacost="580">
+	<health now="330" max="330" />
+	<look type="100" head="0" body="0" legs="0" feet="0" corpse="3028" />
+	<targetchange chance="4" />
+	<targetstrategy nearest="70" weakest="0" mostdamage="30" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag convinceable="1" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1100" skillnextlevel="100" skilladdcount="2" skill="60" attack="39" />
+		<attack name="lifedrain" delay="8" min="-25" max="-55" range="1" />
+	</attacks>
+	<defenses armor="30" defense="25">
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="1" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="0" />
+	</immunities>
+	<voices>
+		<voice sentence="Uhhhhhhh!" />
+		<voice sentence="Aaaaahhhh!" />
+		<voice sentence="Hoooohhh!" />
+		<voice sentence="Chhhhhhh!" />
+	</voices>
+	<loot>
+		<item id="2377" countmax="1" chance="2000"/><!-- two handed sword -->
+		<item id="2399" countmax="3" chance="1000"/><!-- throwing star -->
+		<item id="2145" countmax="1" chance="500"/><!-- small diamond -->
+		<item id="2227" countmax="1" chance="20000"/><!-- rotten meat -->
+		<item id="2459" countmax="1" chance="2000"/><!-- iron helmet -->
+		<item id="2148" countmax="30" chance="30000"/><!-- gold coin -->
+		<item id="2148" countmax="25" chance="40000"/><!-- gold coin -->
+		<item id="2450" countmax="1" chance="1000"/><!-- bone sword -->
+		<item id="2541" countmax="1" chance="1000"/><!-- bone shield -->
+		<item id="2230" countmax="1" chance="50000"/><!-- bone -->
+	</loot>
+</monster>

@@ -1,0 +1,21 @@
+Behavior = {
+ADDRESS,"hello$",! -> "Welcome %N! Daraman's blessings."
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Sorry %N, I am busy. Please wait for your turn.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Daraman's blessings."
+
+"bye"             -> "Daraman's blessings.", Idle
+"job"             -> "I am honoured to be the grandwezir of the caliph."
+"name"            -> "I am Muzir." ### Ibn ??? ###
+"time"            -> "It is exactly %T."
+"caliph"          -> "I am caretaker for the fortune of our beloved and wise caliph."
+"kazzan"          -> *
+"daraman"         -> "I take it upon me to involve myself with worldly issues for the prosperity of our community. I hope the taint of wealth does not harm my soul too much."
+"wezir"           -> "I am responsible for the wealth of our beloved and wise caliph. I can also change money for you."
+"wealth"          -> *
+
+@"gen-bank.ndb"
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Captain Sinbeard" behavior="captain sinbeard.npc" walkradius="2" walkinterval="2000" speed="5" floorchange="0">
+  <look type="134" head="95" body="10" legs="56" feet="77" />
+</npc>

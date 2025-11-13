@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Gargoyle" nameDescription="a gargoyle" race="undead" experience="150" speed="60" manacost="0">
+	<health now="250" max="250" />
+	<look type="95" head="0" body="0" legs="0" feet="0" corpse="3022" />
+	<targetchange chance="5" />
+	<targetstrategy nearest="70" weakest="0" mostdamage="30" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="30" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="2000" skillnextlevel="100" skilladdcount="1" skill="45" attack="24" />
+	</attacks>
+	<defenses armor="26" defense="30">
+		<defense name="healing" delay="10" min="5" max="15">
+			<attribute key="areaeffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity fire="1" />
+		<immunity energy="0" />
+		<immunity poison="1" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="0" />
+		<immunity invisible="0" />
+	</immunities>
+	<voices>
+		<voice sentence="Harrrr Harrrr!" />
+		<voice sentence="Stone sweet stone." />
+		<voice sentence="Feel my claws, softskin." />
+		<voice sentence="Chhhhhrrrrk!" />
+		<voice sentence="There is a stone in your shoe!" />
+	</voices>
+	<loot>
+		<item id="2129" countmax="1" chance="200" /><!-- wolf tooth chain -->
+		<item id="2448" countmax="1" chance="8000" /><!-- studded club -->
+		<item id="2457" countmax="1" chance="200" /><!-- steel helmet -->
+		<item id="1294" countmax="10" chance="10000" /><!-- small stone -->
+		<item id="2394" countmax="1" chance="1000" /><!-- morning star -->
+		<item id="2666" countmax="1" chance="50000" /><!-- meat -->
+		<item id="2671" countmax="2" chance="20000" /><!-- ham -->
+		<item id="2148" countmax="20" chance="40000" /><!-- gold coin -->
+		<item id="2148" countmax="10" chance="70000" /><!-- gold coin -->
+		<item id="2489" countmax="1" chance="200" /><!-- dark armor -->
+		<item id="2209" countmax="1" chance="100" /><!-- club ring -->
+		<item id="2513" countmax="1" chance="1500" /><!-- battle shield -->
+	</loot>
+</monster>

@@ -1,0 +1,105 @@
+Behavior = {
+ADDRESS,"hello$",! -> "Greetings %N. What leads you to me?"
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Be patient, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Daraman's blessings."
+
+"bye"            -> "Daraman's blessings.", Idle
+"job"            -> "I am the weaponmaster of Caliph Kazzan the great."
+"name"           -> "Razan ... Razan Ibn Rublai."
+"time"           -> "You are talking of what you are wasting right now?"
+"caliph"         -> "We owe caliph Kazzan our loyality and gratitude, thrice praised be his name."
+"kazzan"         -> *
+"shalmar"        -> "He is competent. That's fine enough for a mage."
+"djinn"          -> "Some people in Darashia rely to much on the services of these creatures. I wonder if they keep the path in mind."
+"path"           -> "The path of enlightenment, leading to ascension as thaught to us by Daraman." 
+"Daraman"        -> "Better talk to Kasmir about that."
+"enlightenment"  -> *
+"ascension"      -> *
+"ferumbras"      -> "Maybe a worthy oponent, but probably only another of these spellcasting cowards."
+"army"           -> "This information is confidential."
+"guards"         -> *
+"kasmir"         -> "You will find him in the Muhayin, the sacred tower of meditation."
+"excalibug"      -> "The skill should make a fighter strong, not the weapon."
+"news"           -> "I don't care for rumours but for facts."
+"weaponmaster"   -> "I mastered the arts of close combat and distance fight alike. I teach both, paladins and knights in their ways."
+"tibia"          -> "The world is a dangerous place for body and for soul."
+"knight"         -> "The way of the warrior is not that different from the way to ascension."
+"paladin"        -> *
+"spellbook"      -> "In a spellbook, your spells are listed. There you will find the pronunciation of each spell. Rely more on your skills, though."
+Knight,"spell"  -> "I can teach you healing spells and support spells. What kind of spell do you wish to learn? You can also tell me for which level you would like to learn a spell, if you prefer that.", Topic=2
+Paladin,"spell" -> "I can teach you rune spells and instant spells. What kind of spell do you wish to learn? You can also tell me for which magic level you would like to learn a spell, if you prefer that.", Topic=3
+"spell"         -> "Sorry, I only teach spells to knights and paladins."
+
+Knight,"instant","spell"      -> "I can teach you healing spells and support spells. What kind of spell do you wish to learn?"
+Knight,"healing","spell"      -> "In this category I have 'Light Healing' and 'Antidote'."
+Knight,"support","spell"      -> "In this category I have 'Light', 'Find Person' and 'Great Light'."
+Knight,"level"                -> "For which level would you like to learn a spell?", Topic=2
+Paladin,"rune","spell"        -> "I sell 'Light Magic Missile', 'Heavy Magic Missile', 'Fireball' and 'Destroy Field'."
+Paladin,"instant","spell"     -> "I sell healing spells, supply spells and support spells. Which of these interests you most?"
+Paladin,"level"               -> "For which level would you like to learn a spell?", Topic=3
+
+Topic=2,"healing","spell"      -> "In this category I have 'Light Healing' and 'Antidote'."
+Topic=2,"support","spell"      -> "In this category I have 'Light', 'Find Person' and 'Great Light'."
+Topic=3,"bye"                  -> "Daraman's blessings.", Idle
+
+Topic=2,"0$"	-> "For level 0 I have 'Find Person' and 'Light'.", Topic=2
+Topic=2,"1$"	-> "For level 1 I have 'Light Healing'.", Topic=2
+Topic=2,"2$"	-> "For level 2 I have 'Antidote'.", Topic=2
+Topic=2,"3$"	-> "For level 3 I have 'Great Light'.", Topic=2
+Topic=2       -> "Sorry, I have only spells for level 0, 1, 2 and 3.", Topic=2
+
+Knight,"find","person"   -> String="Find Person", Price=80,  "Do you want to buy the spell 'Find Person' for %P gold?", Topic=4
+Knight,"light"           -> String="Light", Price=100, "Do you want to buy the spell 'Light' for %P gold?", Topic=4
+Knight,"light","healing" -> String="Light Healing",  Price=170, "Do you want to buy the spell 'Light Healing' for %P gold?", Topic=4
+Knight,"antidote"        -> String="Antidote", Price=150, "Do you want to buy the spell 'Antidote' for %P gold?", Topic=4
+Knight,"great","light"   -> String="Great Light", Price=500, "Do you want to buy the spell 'Great Light' for %P gold?", Topic=4
+
+Topic=3,"rune","spell"        -> "I sell 'Light Magic Missile', 'Heavy Magic Missile', 'Fireball' and 'Destroy Field'."
+Topic=3,"instant","spell"     -> "I sell healing spells, supply spells and support spells. Which of these interests you most?"
+Topic=3,"level"               -> "For which level would you like to learn a spell?", Topic=3
+Topic=3,"bye"                 -> "Daraman's blessings.", Idle
+
+Topic=3,"0$"	-> "For magic level 0 I have 'Food', 'Find Person' and 'Light'.", Topic=3
+Topic=3,"1$"	-> "For magic level 1 I have 'Light Healing' and 'Light Magic Missile'.", Topic=3
+Topic=3,"2$"	-> "For magic level 2 I have 'Antidote', 'Conjure Arrow' and 'Intense Healing'.", Topic=3
+Topic=3,"3$"	-> "For magic level 3 I have 'Great Light' and 'Heavy Magic Missile'.", Topic=3
+Topic=3,"4$"	-> "For magic level 4 I have 'Magic Shield'.", Topic=3
+Topic=3,"5$"	-> "For magic level 5 I have 'Poisoned Arrow' and 'Fireball'.", Topic=3
+Topic=3,"6$"	-> "For magic level 6 'Destroy Field'.", Topic=3
+Topic=3,"8$"	-> "For magic level 8 I have 'Ultimate Healing'.", Topic=3
+Topic=3,"10$"	-> "For magic level 10 I have 'Explosive Arrow'.", Topic=3
+Topic=3,"15$"	-> "For magic level 15 I have 'Invisible'.", Topic=3
+Topic=3       -> "Sorry, I have only spells for level 0 to 6 as well for 8, 10 and 15.", Topic=3
+
+Paladin,"healing","spell"          -> "In this category I have 'Light Healing', 'Intense Healing', 'Ultimate Healing' and 'Antidote'."
+Paladin,"supply","spell"           -> "In this category I have 'Food', 'Conjure Arrow', 'Poisoned Arrow' and 'Explosive Arrow'."
+Paladin,"support","spell"          -> "In this category I have 'Find Person', 'Light', 'Great Light', 'Magic Shield' and 'Invisible'."
+
+Paladin,"find","person"      -> String="Find Person", Price=80,   "Do you want to buy the spell 'Find Person' for %P gold?", Topic=4
+Paladin,"light"              -> String="Light", Price=100,  "Do you want to buy the spell 'Light' for %P gold?", Topic=4
+Paladin,"food"               -> String="Food", Price=150,  "Do you want to buy the spell 'Food' for %P gold?", Topic=4
+Paladin,"light","healing"    -> String="Light Healing",  Price=170,  "Do you want to buy the spell 'Light Healing' for %P gold?", Topic=4
+Paladin,"light","missile"    -> String="Light Magic Missile",  Price=200,  "Do you want to buy the spell 'Light Magic Missile' for %P gold?", Topic=4
+Paladin,"antidote"           -> String="Antidote", Price=150,  "Do you want to buy the spell 'Antidote' for %P gold?", Topic=4
+Paladin,"intense","healing"  -> String="Intense Healing",  Price=350,  "Do you want to buy the spell 'Intense Healing' for %P gold?", Topic=4
+Paladin,"conjure","arrow"    -> String="Conjure Arrow", Price=450,  "Do you want to buy the spell 'Conjure Arrow' for %P gold?", Topic=4
+Paladin,"great","light"      -> String="Great Light", Price=500,  "Do you want to buy the spell 'Great Light' for %P gold?", Topic=4
+Paladin,"heavy","missile"    -> String="Heavy Magic Missile",  Price=600,  "Do you want to buy the spell 'Heavy Magic Missile' for %P gold?", Topic=4
+Paladin,"magic","shield"     -> String="Magic Shield", Price=450,  "Do you want to buy the spell 'Magic Shield' for %P gold?", Topic=4
+Paladin,"fireball"           -> String="Fireball", Price=800,  "Do you want to buy the spell 'Fireball' for %P gold?", Topic=4
+Paladin,"poison","arrow"     -> String="Poisoned Arrow", Price=700,  "Do you want to buy the spell 'Poisoned Arrow' for %P gold?", Topic=4
+Paladin,"destroy","field"    -> String="Destroy Field", Price=350,  "Do you want to buy the spell 'Destroy Field' for %P gold?", Topic=4
+Paladin,"ultimate","healing" -> String="Ultimate Healing",  Price=1000, "Do you want to buy the spell 'Ultimate Healing' for %P gold?", Topic=4
+Paladin,"explosive","arrow"  -> String="Explosive Arrow", Price=1000, "Do you want to buy the spell 'Explosive Arrow' for %P gold?", Topic=4
+Paladin,"invisible"          -> String="Invisibility", Price=1000, "Do you want to buy the spell 'Invisible' for %P gold?", Topic=4
+
+Topic=4,"yes",SpellKnown(String)=1        -> "You already know how to cast this spell."
+Topic=4,"yes",MagicLevel<SpellMagicLevel(String)    -> Amount=SpellMagicLevel(String), "You have to be magic level %A to learn this spell."
+Topic=4,"yes",CountMoney<Price            -> "Return when you have enough gold."
+Topic=4,"yes"                             -> "Here you are. Look in your spellbook for the pronunciation of this spell.", DeleteMoney, EffectOpp(13), TeachSpell(String)
+Topic=4                                   -> "Maybe next time."
+}

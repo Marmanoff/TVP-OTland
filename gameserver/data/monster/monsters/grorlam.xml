@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Grorlam" race="undead" experience="1600" speed="100" manacost="590">
+	<health now="2700" max="2700" />
+	<look type="205" head="0" body="0" legs="0" feet="0" corpse="2952" />
+	<targetchange chance="0" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="0" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1500" skillnextlevel="100" skilladdcount="1" skill="75" attack="60" />
+		<attack name="physical" delay="7" min="-150" max="-200" range="7">
+			<attribute key="shooteffect" value="largerock" />
+		</attack>
+	</attacks>
+	<defenses armor="55" defense="35">
+		<defense name="speed" delay="18" duration="6000" speed="95" speedvariation="5">
+			<attribute key="areaeffect" value="redshimmer" />
+		</defense>
+		<defense name="healing" delay="4" min="100" max="150">
+			<attribute key="areaeffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity fire="1" />
+		<immunity energy="0" />
+		<immunity poison="1" />
+		<immunity physical="0" />
+		<immunity outfit="1" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="1" />
+		<immunity invisible="0" />
+	</immunities>
+	<loot>
+		<item id="2509" countmax="1" chance="7000" /><!-- steel shield -->
+		<item id="2645" countmax="1" chance="500" /><!-- steel boots -->
+		<item id="1294" countmax="4" chance="13000" /><!-- small stone -->
+		<item id="2150" countmax="2" chance="6500" /><!-- small amethyst -->
+		<item id="2483" countmax="1" chance="5000" /><!-- scale armor -->
+		<item id="2156" countmax="1" chance="500" /><!-- red gem -->
+		<item id="2166" countmax="1" chance="5500" /><!-- power ring -->
+		<item id="2553" countmax="1" chance="6000" /><!-- pick -->
+		<item id="2148" countmax="15" chance="16000" /><!-- gold coin -->
+		<item id="2124" countmax="1" chance="200" /><!-- crystal ring -->
+	</loot>
+</monster>

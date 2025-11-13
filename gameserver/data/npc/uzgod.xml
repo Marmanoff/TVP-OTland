@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Uzgod" behavior="uzgod.npc" walkradius="1" walkinterval="2000" speed="7" floorchange="0">
+  <look type="160" head="77" body="79" legs="56" feet="115" />
+</npc>

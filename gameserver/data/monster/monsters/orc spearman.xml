@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Orc Spearman" nameDescription="an orc spearman" race="blood" experience="38" speed="48" manacost="310">
+	<health now="105" max="105" />
+	<look type="50" head="0" body="0" legs="0" feet="0" corpse="2920" />
+	<targetchange chance="50" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag illusionable="1" />
+		<flag pushable="1" />
+		<flag convinceable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="4" />
+		<flag runonhealth="10" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1500" skillnextlevel="100" skilladdcount="1" skill="19" attack="17" />
+		<attack name="physical" delay="15" min="-16" max="-40" range="7">
+			<attribute key="shooteffect" value="spear" />
+		</attack>
+	</attacks>
+	<defenses armor="6" defense="12">
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="0" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="0" />
+		<immunity invisible="0" />
+	</immunities>
+	<voices>
+		<voice sentence="Ugaar!" />
+	</voices>
+	<loot>
+		<item id="2468" countmax="1" chance="10000" /><!-- studded legs -->
+		<item id="2482" countmax="1" chance="9000" /><!-- studded helmet -->
+		<item id="2389" countmax="1" chance="23000" /><!-- spear -->
+		<item id="2666" countmax="1" chance="30000" /><!-- meat -->
+		<item id="2420" countmax="1" chance="10000" /><!-- machete -->
+		<item id="2148" countmax="7" chance="22000" /><!-- gold coin -->
+		<item id="2220" countmax="1" chance="7700" /><!-- dirty fur -->
+	</loot>
+</monster>

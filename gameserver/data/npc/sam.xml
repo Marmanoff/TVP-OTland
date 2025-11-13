@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Sam" behavior="sam.npc" walkradius="4" walkinterval="2000" speed="10" floorchange="0">
+  <look type="131" head="57" body="112" legs="48" feet="95" />
+</npc>

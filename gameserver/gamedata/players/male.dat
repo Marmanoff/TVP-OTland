@@ -1,0 +1,34 @@
+# The Violet Project Player File
+# male.dat: start file for newly created players
+# Any configurations from this file will override them to newly created players
+
+Sex = 1
+BankBalance = 0
+Blessings = 0
+Position = [32097,32219,7]
+DefaultOutfit = (128, 78-106-58-95)
+
+Level = 1
+Experience = 0
+Health = 150
+MaxHealth = 150
+Mana = 0
+MaxMana = 0
+ManaSpent = 0
+MagicLevel = 0
+Soul = 100
+Capacity = 40000
+Stamina = 2530
+
+Skill = (0, 10, 0)
+Skill = (1, 10, 0)
+Skill = (2, 10, 0)
+Skill = (3, 10, 0)
+Skill = (4, 10, 0)
+Skill = (5, 10, 0)
+Skill = (6, 10, 0)
+
+Backpack = (1987 Content={2674 Amount=1})
+Armor = (2650)
+Right = (2050)
+Left = (2382)

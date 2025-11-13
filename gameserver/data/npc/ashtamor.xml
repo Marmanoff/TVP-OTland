@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Ashtamor" behavior="ashtamor.npc" walkradius="1" walkinterval="2000" speed="5" floorchange="0">
+  <look type="130" head="19" body="114" legs="76" feet="114" />
+</npc>

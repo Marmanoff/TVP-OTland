@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Beholder" nameDescription="a beholder" race="blood" experience="170" speed="35" manacost="0">
+	<health now="260" max="260" />
+	<look type="17" head="0" body="0" legs="0" feet="0" corpse="2908" />
+	<targetchange chance="50" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="4" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1200" skillnextlevel="100" skilladdcount="1" skill="35" attack="12" />
+		<attack name="manadrain" delay="20" min="-5" max="-25" range="7">
+			<attribute key="areaeffect" value="redshimmer" />
+		</attack>
+		<attack name="lifedrain" delay="17" min="-35" max="-45" range="7">
+			<attribute key="areaeffect" value="redshimmer" />
+		</attack>
+		<attack name="poison" delay="14" min="-5" max="-45" range="7">
+			<attribute key="shooteffect" value="poison" />
+		</attack>
+		<attack name="physical" delay="13" min="-30" max="-50" range="7">
+			<attribute key="shooteffect" value="death" />
+			<attribute key="areaeffect" value="mortarea" />
+		</attack>
+		<attack name="fire" delay="16" min="-25" max="-45" range="7">
+			<attribute key="shooteffect" value="fire" />
+		</attack>
+		<attack name="energy" delay="15" min="-15" max="-45" range="7">
+			<attribute key="shooteffect" value="energy" />
+		</attack>
+	</attacks>
+	<defenses armor="5" defense="20">
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="1" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="0" />
+		<immunity invisible="1" />
+	</immunities>
+	<summons maxSummons="6">
+		<summon name="Skeleton" max="6" delay="9" />
+	</summons>
+	<voices>
+		<voice sentence="Eye for eye!" />
+		<voice sentence="Here's looking at you!" />
+		<voice sentence="Let me take a look at you!" />
+		<voice sentence="You've got the look!" />
+	</voices>
+	<loot>
+		<item id="2512" countmax="1" chance="3000"/><!-- wooden shield -->
+		<item id="2377" countmax="1" chance="4000"/><!-- two handed sword -->
+		<item id="2509" countmax="1" chance="4000"/><!-- steel shield -->
+		<item id="2175" countmax="1" chance="5000"/><!-- spellbook -->		
+		<item id="2394" countmax="1" chance="7000"/><!-- morning star -->
+		<item id="2397" countmax="1" chance="9000"/><!-- longsword -->
+		<item id="2148" countmax="20" chance="70000"/><!-- gold coin -->
+		<item id="2148" countmax="16" chance="80000"/><!-- gold coin -->
+		<item id="2148" countmax="12" chance="90000"/><!-- gold coin -->
+		<item id="2518" countmax="1" chance="100"/><!-- beholder shield -->
+	</loot>
+</monster>

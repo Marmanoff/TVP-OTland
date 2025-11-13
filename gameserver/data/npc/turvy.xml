@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Turvy" behavior="turvy.npc" walkradius="2" walkinterval="2000" speed="3" floorchange="0">
+  <look type="139" head="78" body="52" legs="64" feet="115" />
+</npc>

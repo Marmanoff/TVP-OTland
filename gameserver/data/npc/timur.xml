@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Timur" behavior="timur.npc" walkradius="2" walkinterval="2000" speed="10" floorchange="0">
+  <look type="128" head="0" body="116" legs="102" feet="95" />
+</npc>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Shirith" behavior="shirith.npc" walkradius="3" walkinterval="2000" speed="6" floorchange="0">
+  <look type="144" head="59" body="97" legs="58" feet="76" />
+</npc>

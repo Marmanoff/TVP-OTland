@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Donald McRonald" behavior="donald mcronald.npc" walkradius="3" walkinterval="2000" speed="10" floorchange="0">
+  <look type="128" head="41" body="94" legs="79" feet="76" />
+</npc>

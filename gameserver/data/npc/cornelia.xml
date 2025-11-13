@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Cornelia" behavior="cornelia.npc" walkradius="3" walkinterval="2000" speed="10" floorchange="0">
+  <look type="139" head="95" body="57" legs="102" feet="115" />
+</npc>

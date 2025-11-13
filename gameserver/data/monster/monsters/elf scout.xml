@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Elf Scout" nameDescription="an elf scout" race="blood" experience="75" speed="70" manacost="360">
+	<health now="160" max="160" />
+	<look type="64" head="0" body="0" legs="0" feet="0" corpse="2981" />
+	<targetchange chance="50" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag convinceable="1" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="4" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1500" skillnextlevel="100" skilladdcount="1" skill="25" attack="18" />
+		<attack name="physical" delay="4" min="-30" max="-60" range="7">
+			<attribute key="shooteffect" value="arrow" />
+		</attack>
+	</attacks>
+	<defenses armor="7" defense="18">
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="0" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="0" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices>
+		<voice sentence="Tha'shi Ab'Dendriel!" />
+		<voice sentence="Feel the sting of my arrows!" />
+		<voice sentence="Thy blood will quench the soil's thirst!" />
+		<voice sentence="Evicor guide my arrow." />
+		<voice sentence="Your existence will end here!" />
+	</voices>
+	<loot>
+		<item id="2031" countmax="1" chance="14000" /><!-- waterskin -->
+		<item id="2482" countmax="1" chance="8000" /><!-- studded helmet -->
+		<item id="2484" countmax="1" chance="12000" /><!-- studded armor -->
+		<item id="2642" countmax="1" chance="10000" /><!-- sandals -->
+		<item id="2545" countmax="3" chance="15000" /><!-- poison arrow -->
+		<item id="2397" countmax="1" chance="6000" /><!-- longsword -->
+		<item id="2681" countmax="1" chance="18000" /><!-- grapes -->
+		<item id="2148" countmax="5" chance="30000" /><!-- gold coin -->
+		<item id="2456" countmax="1" chance="4000" /><!-- bow -->
+		<item id="2544" countmax="12" chance="30000" /><!-- arrow -->
+	</loot>
+</monster>

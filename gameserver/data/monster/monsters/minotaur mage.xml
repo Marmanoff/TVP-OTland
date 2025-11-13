@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Minotaur Mage" nameDescription="a minotaur mage" race="blood" experience="150" speed="45" manacost="0">
+	<health now="155" max="155" />
+	<look type="23" head="0" body="0" legs="0" feet="0" corpse="2866" />
+	<targetchange chance="50" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="4" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skill="18" attack="15" />
+		<attack name="energyfield" delay="9" range="7" radius="1" target="1">
+			<attribute key="shooteffect" value="energy" />
+		</attack>
+		<attack name="fire" delay="11" min="-35" max="-95" range="7" radius="1" target="1">
+			<attribute key="shooteffect" value="fire" />
+			<attribute key="areaeffect" value="firearea" />
+		</attack>
+		<attack name="energy" delay="6" min="-15" max="-45" range="7">
+			<attribute key="shooteffect" value="energy" />
+			<attribute key="areaeffect" value="energy" />
+		</attack>
+	</attacks>
+	<defenses armor="18" defense="40">
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="1" />
+		<immunity poison="0" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="0" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices>
+		<voice sentence="Learrn tha secrret uf deathhh!" yell="1" />
+		<voice sentence="Kaplar!" />
+	</voices>
+	<loot>
+		<item id="2050" countmax="2" chance="30000"/><!-- torch -->
+		<item id="2649" countmax="1" chance="15000"/><!-- leather legs -->
+		<item id="2461" countmax="1" chance="10000"/><!-- leather helmet -->
+		<item id="2403" countmax="1" chance="10000"/><!-- knife -->
+		<item id="2148" countmax="10" chance="80000"/><!-- gold coin -->
+		<item id="2817" countmax="1" chance="70000"/><!-- dead snake -->
+		<item id="2404" countmax="1" chance="4000"/><!-- combat knife -->
+		<item id="2648" countmax="1" chance="2000"/><!-- chain legs -->
+		<item id="2684" countmax="7" chance="10000"/><!-- carrot -->
+		<item id="2465" countmax="1" chance="4000"/><!-- brass armor -->
+	</loot>
+</monster>

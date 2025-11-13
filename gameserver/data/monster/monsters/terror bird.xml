@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Terror Bird" nameDescription="a terror bird" race="blood" experience="150" speed="66" manacost="490">
+	<health now="300" max="300" />
+	<look type="218" head="0" body="0" legs="0" feet="0" corpse="4317" />
+	<targetchange chance="5" />
+	<targetstrategy nearest="70" weakest="0" mostdamage="30" random="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag convinceable="1" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="2000" skillnextlevel="100" skilladdcount="1" skill="46" attack="37" />
+	</attacks>
+	<defenses armor="13" defense="21">
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="0" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="0" />
+		<immunity invisible="0" />
+	</immunities>
+	<voices>
+		<voice sentence="CRAAAHHH!" />
+		<voice sentence="Gruuuh Gruuuh." />
+		<voice sentence="Carrah Carrah!" />
+	</voices>
+	<loot>
+		<item id="2666" countmax="2" chance="50000"/><!-- meat -->
+		<item id="2148" countmax="20" chance="40000"/><!-- gold coin -->
+		<item id="2148" countmax="10" chance="70000"/><!-- gold coin -->
+		<item id="3970" countmax="1" chance="100"/><!-- feather headdress -->
+	</loot>
+</monster>

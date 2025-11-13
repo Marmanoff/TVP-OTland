@@ -1,0 +1,20 @@
+Behavior = {
+ADDRESS,"hello$",! -> "Hiho, Hiho, %N! What can I do for you?"
+ADDRESS,"hi$",!    -> *
+ADDRESS,"hiho$",!  -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Hey, %N gimme a minute, ok?", Queue
+BUSY,"hi$",!       -> *
+BUSY,"hiho$",!     -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Yeah, bye."
+
+"bye"      -> "Good bye.", Idle
+"farewell" -> *
+
+"job"      -> "I can change money for you."
+"name"     -> "I am Rokyn Pursesniffer, son of Fire, proud member of the Molten Rock fellowship."
+"time"     -> "It is exactly %T right now."
+
+@"gen-bank.ndb"
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Talphion" behavior="talphion.npc" walkradius="2" walkinterval="2000" speed="3" floorchange="0">
+  <look type="160" head="11" body="86" legs="87" feet="106" />
+</npc>

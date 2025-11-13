@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Chemar" behavior="chemar.npc" walkradius="2" walkinterval="2000" speed="10" floorchange="0">
+  <look type="130" head="95" body="3" legs="14" feet="76" />
+</npc>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Phillip" behavior="phillip.npc" walkradius="4" walkinterval="2000" speed="2" floorchange="0">
+  <look type="128" head="116" body="54" legs="68" feet="76" />
+</npc>

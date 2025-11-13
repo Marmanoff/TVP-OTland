@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Bonebeast" nameDescription="a bonebeast" race="undead" experience="580" speed="69" manacost="0">
+	<health now="515" max="515" />
+	<look type="101" head="0" body="0" legs="0" feet="0" corpse="3031" />
+	<targetchange chance="20" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="0" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1100" skillnextlevel="100" skilladdcount="2" skill="75" attack="47" poisoncycles="110" />
+		<attack name="poisoncondition" delay="8" cycle="70" mincycle="10" radius="3" target="0">
+			<attribute key="areaeffect" value="poison" />
+		</attack>
+		<attack name="lifedrain" delay="7" min="-30" max="-50" radius="3" target="0">
+			<attribute key="areaeffect" value="redshimmer" />
+		</attack>
+		<attack name="poison" delay="10" min="-25" max="-65" range="7">
+			<attribute key="shooteffect" value="poison" />
+			<attribute key="areaeffect" value="poison" />
+		</attack>
+	</attacks>
+	<defenses armor="40" defense="45">
+		<defense name="healing" delay="9" min="30" max="60">
+			<attribute key="areaeffect" value="greenspark" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="1" />
+		<immunity physical="0" />
+		<immunity outfit="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices>
+		<voice sentence="Cccchhhhhhhhh!" />
+		<voice sentence="Knooorrrrr!" />
+	</voices>
+	<loot>
+		<item id="2229" countmax="1" chance="20000" /><!-- skull -->
+		<item id="2463" countmax="1" chance="8000" /><!-- plate armor -->
+		<item id="2796" countmax="1" chance="1500" /><!-- green mushroom -->
+		<item id="2148" countmax="90" chance="30000" /><!-- gold coin -->
+		<item id="2541" countmax="1" chance="2000" /><!-- bone shield -->
+		<item id="2449" countmax="1" chance="5000" /><!-- bone club -->
+		<item id="2230" countmax="1" chance="50000" /><!-- bone -->
+		<item id="2231" countmax="1" chance="10000" /><!-- big bone -->
+	</loot>
+</monster>

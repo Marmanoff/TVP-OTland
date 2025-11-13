@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Penny" behavior="penny.npc" walkradius="2" walkinterval="2000" speed="10" floorchange="0">
+  <look type="137" head="96" body="79" legs="95" feet="96" />
+</npc>

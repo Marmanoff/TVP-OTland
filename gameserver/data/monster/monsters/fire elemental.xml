@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Fire Elemental" nameDescription="a fire elemental" race="fire" experience="220" speed="55" manacost="690">
+	<health now="280" max="280" />
+	<look type="49" head="0" body="0" legs="0" feet="0" corpse="1487" />
+	<targetchange chance="10" />
+	<targetstrategy nearest="80" weakest="0" mostdamage="0" random="20" />
+	<flags>
+		<flag summonable="1" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag convinceable="1" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1500" skillnextlevel="100" skilladdcount="1" skill="38" attack="38" />
+		<attack name="firefield" delay="3" range="7" radius="1" target="1">
+			<attribute key="shooteffect" value="fire" />
+		</attack>
+		<attack name="fire" delay="4" min="-55" max="-155" range="7" radius="2" target="1">
+			<attribute key="shooteffect" value="fire" />
+			<attribute key="areaeffect" value="firearea" />
+		</attack>
+	</attacks>
+	<defenses armor="18" defense="20">
+	</defenses>
+	<immunities>
+		<immunity fire="1" />
+		<immunity energy="0" />
+		<immunity poison="0" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+	</immunities>
+</monster>

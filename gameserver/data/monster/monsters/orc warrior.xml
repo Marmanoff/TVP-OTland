@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Orc Warrior" nameDescription="an orc warrior" race="blood" experience="50" speed="55" manacost="360">
+	<health now="125" max="125" />
+	<look type="7" head="0" body="0" legs="0" feet="0" corpse="2862" />
+	<targetchange chance="0" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag illusionable="1" />
+		<flag pushable="1" />
+		<flag convinceable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="10" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1200" skillnextlevel="100" skilladdcount="1" skill="42" attack="19" />
+	</attacks>
+	<defenses armor="8" defense="14">
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="0" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="0" />
+		<immunity invisible="0" />
+	</immunities>
+	<voices>
+		<voice sentence="Grow truk grrrr." />
+		<voice sentence="Trak grrrr brik." />
+		<voice sentence="Alk!" />
+	</voices>
+	<loot>
+		<item id="2512" countmax="1" chance="18000" /><!-- wooden shield -->
+		<item id="2385" countmax="1" chance="50000" /><!-- sabre -->
+		<item id="2411" countmax="1" chance="100" /><!-- poison dagger -->
+		<item id="2666" countmax="1" chance="15000" /><!-- meat -->
+		<item id="2148" countmax="15" chance="65000" /><!-- gold coin -->
+		<item id="2530" countmax="1" chance="500" /><!-- copper shield -->
+		<item id="2464" countmax="1" chance="7500" /><!-- chain armor -->
+		<item id="2007" countmax="1" chance="7000" /><!-- bottle -->
+	</loot>
+</monster>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Briasol" behavior="briasol.npc" walkradius="1" walkinterval="2000" speed="10" floorchange="0">
+  <look type="144" head="3" body="86" legs="87" feet="76" />
+</npc>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Captain Bluebear" behavior="captain bluebear.npc" walkradius="2" walkinterval="2000" speed="5" floorchange="0">
+  <look type="129" head="19" body="69" legs="107" feet="50" />
+</npc>

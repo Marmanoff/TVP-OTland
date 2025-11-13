@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Stutch" behavior="stutch.npc" walkradius="0" walkinterval="2000" speed="10" floorchange="0">
+  <look type="131" head="79" body="79" legs="79" feet="79" />
+</npc>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Ebenizer" behavior="ebenizer.npc" walkradius="1" walkinterval="2000" speed="10" floorchange="0">
+  <look type="128" head="59" body="95" legs="87" feet="76" />
+</npc>

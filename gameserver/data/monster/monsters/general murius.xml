@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="General Murius" race="blood" experience="300" speed="85" manacost="0">
+	<health now="550" max="550" />
+	<look type="207" head="0" body="0" legs="0" feet="0" corpse="2876" />
+	<targetchange chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="20" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="0" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1500" skillnextlevel="100" skilladdcount="1" skill="70" attack="55" />
+		<attack name="physical" delay="10" min="-50" max="-80" radius="3" target="0">
+			<attribute key="areaeffect" value="blackspark" />
+		</attack>
+		<attack name="physical" delay="9" min="-50" max="-120" range="7">
+			<attribute key="shooteffect" value="bolt" />
+		</attack>
+	</attacks>
+	<defenses armor="26" defense="52">
+		<defense name="healing" delay="7" min="50" max="100">
+			<attribute key="areaeffect" value="redshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="0" />
+		<immunity physical="0" />
+		<immunity outfit="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="0" />
+		<immunity invisible="1" />
+	</immunities>
+	<summons maxSummons="2">
+		<summon name="Minotaur Guard" max="2" delay="9" />
+		<summon name="Minotaur Archer" max="2" delay="7" />
+	</summons>
+	<voices>
+		<voice sentence="Feel the power of the Mooh'Tah!" />
+		<voice sentence="You will get what you deserve!" />
+		<voice sentence="For the king!" />
+		<voice sentence="Guards!" />
+	</voices>
+	<loot>
+		<item id="2666" countmax="1" chance="10000" /><!-- meat -->
+		<item id="2148" countmax="50" chance="60000" /><!-- gold coin -->
+		<item id="2580" countmax="1" chance="5000" /><!-- fishing rod -->
+		<item id="2387" countmax="1" chance="7500" /><!-- double axe -->
+		<item id="2648" countmax="1" chance="35000" /><!-- chain legs -->
+		<item id="2465" countmax="1" chance="28000" /><!-- brass armor -->
+		<item id="2513" countmax="1" chance="18000" /><!-- battle shield -->
+	</loot>
+</monster>

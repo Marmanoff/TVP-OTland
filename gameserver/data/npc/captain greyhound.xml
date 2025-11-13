@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Captain Greyhound" behavior="captain greyhound.npc" walkradius="2" walkinterval="2000" speed="5" floorchange="0">
+  <look type="129" head="96" body="113" legs="95" feet="115" />
+</npc>

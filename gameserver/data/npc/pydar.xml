@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Pydar" behavior="pydar.npc" walkradius="2" walkinterval="2000" speed="3" floorchange="0">
+  <look type="160" head="95" body="94" legs="132" feet="118" />
+</npc>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Maria" behavior="maria.npc" walkradius="1" walkinterval="2000" speed="8" floorchange="0">
+  <look type="136" head="77" body="79" legs="61" feet="131" />
+</npc>

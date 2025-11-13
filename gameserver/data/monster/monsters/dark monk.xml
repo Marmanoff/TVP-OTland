@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Dark Monk" nameDescription="a dark monk" race="blood" experience="145" speed="75" manacost="480">
+	<health now="190" max="190" />
+	<look type="225" head="0" body="0" legs="0" feet="0" corpse="3058" />
+	<targetchange chance="5" />
+	<targetstrategy nearest="70" weakest="20" mostdamage="10" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag convinceable="1" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1500" skillnextlevel="100" skilladdcount="1" skill="50" attack="37" />
+		<attack name="lifedrain" delay="9" min="-25" max="-49" range="1" />
+	</attacks>
+	<defenses armor="22" defense="43">
+		<defense name="speed" delay="10" duration="2000" speed="55" speedvariation="5">
+			<attribute key="areaeffect" value="redshimmer" />
+		</defense>
+		<defense name="healing" delay="9" min="25" max="49">
+			<attribute key="areaeffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="0" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="0" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices>
+		<voice sentence="This is where your path will end!" />
+		<voice sentence="Your end has come." />
+		<voice sentence="You are no match for us!" />
+	</voices>
+	<loot>
+		<item id="2401" countmax="1" chance="11000" /><!-- staff -->
+		<item id="1949" countmax="1" chance="20000" /><!-- scroll -->
+		<item id="2642" countmax="1" chance="8000" /><!-- sandals -->
+		<item id="2166" countmax="1" chance="100" /><!-- power ring -->
+		<item id="2044" countmax="1" chance="10000" /><!-- lamp -->
+		<item id="2177" countmax="1" chance="1000" /><!-- life crystal -->
+		<item id="2467" countmax="1" chance="5500" /><!-- leather armor -->
+		<item id="2148" countmax="18" chance="15000" /><!-- gold coin -->
+		<item id="1987" countmax="1" chance="13000" /><!-- bag -->
+		<item id="2015" countmax="1" chance="9000" /><!-- brown flask -->
+		<item id="2689" countmax="1" chance="20000" /><!-- bread -->
+		<item id="2193" countmax="1" chance="100" /><!-- ankh -->
+	</loot>
+</monster>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raids>
+	<!-- Use these tags to set the minimum and maximum margins between raid executions. -->
+	<!-- Using smaller amounts for repeatable raids can increase their frequency of execution per day. -->
+	<!-- minmargin="30000" maxmargin="60000" -->
+
+	<!--
+		== BOSS RAIDS ==
+		Raids that have setup "bossraid" as true will not reschedule upon execution.
+		Those raids will only reschedule after their single monster or area spawn monsters have died
+		and that they have "isboss" attribute set to true to identify it.
+
+		== SERVER SAVE MARGIN ==
+		Raids that have setup "serverSaveMargin" will not execute if they are this near server save.
+		For example, serverSaveMargin="05:00:00", raid will not execute if server save will occur 
+		within 5 hours.
+
+		The raid will be re-scheduled to /2 and *2 the time of the server save margin to the next day.
+		So from 2:30 hours, to 10 hours from server save.
+	-->
+
+	<raid name="abdendrielbadgers" log="true" repeatable="false" interval="1209600" file="abdendrielbadgers.xml"/>
+	<raid name="abdendrielwolfattack" log="true" repeatable="false" interval="2592000" file="abdendrielwolfattack.xml"/>
+	<raid name="ankrahmunscarabinvasion" log="true" repeatable="false" interval="15552000" file="ankrahmunscarabinvasion.xml"/>
+	<raid name="carlintowerorcs" log="true" repeatable="false" interval="2592000" file="carlintowerorcs.xml"/>
+	<raid name="cavesgrorlam0" log="true" repeatable="false" interval="1209600" file="cavesgrorlam0.xml"/>
+	<raid name="cavesgrorlam1" log="true" repeatable="false" interval="1209600" file="cavesgrorlam1.xml"/>
+	<raid name="cavesgrorlam2" log="true" repeatable="false" interval="1209600" file="cavesgrorlam2.xml"/>
+	<raid name="cavesgrorlam3" log="true" repeatable="false" interval="1209600" file="cavesgrorlam3.xml"/>
+	<raid name="cavesgrorlam4" log="true" repeatable="false" interval="1209600" file="cavesgrorlam4.xml"/>
+	<raid name="cavesgrorlam5" log="true" repeatable="false" interval="1209600" file="cavesgrorlam5.xml"/>
+	<raid name="cormayadwarfattack" log="true" repeatable="false" interval="1209600" file="cormayadwarfattack.xml"/>
+	<raid name="darashiaundeadinvasion" log="true" repeatable="false" interval="15552000" file="darashiaundeadinvasion.xml"/>
+	<raid name="darashiawaspplague" log="true" repeatable="false" interval="1209600" file="darashiawaspplague.xml"/>
+	<raid name="dracoriadieingdragons" log="true" repeatable="false" interval="1209600" file="dracoriadieingdragons.xml"/>
+	<raid name="drefianecromancer" log="true" repeatable="false" interval="1209600" file="drefianecromancer.xml"/>
+	<raid name="edronorshabaal" log="true" repeatable="false" interval="31104000" file="edronorshabaal.xml"/>
+	<raid name="edronskunks" log="true" repeatable="false" interval="2592000" file="edronskunks.xml"/>
+	<raid name="foldayetis" log="true" repeatable="false" interval="2592000" file="foldayetis.xml"/>
+	<raid name="halloweenhare" log="true" repeatable="false" date="1130763600" file="halloweenhare.xml"/>
+	<raid name="kazordoonhornedfox" log="true" repeatable="false" interval="1209600" file="kazordoonhornedfox.xml"/>
+	<raid name="kazordoonspiderplague" log="true" repeatable="false" interval="1209600" file="kazordoonspiderplague.xml"/>
+	<raid name="mintwalinminogeneral" log="true" repeatable="false" interval="1209600" file="mintwalinminogeneral.xml"/>
+	<raid name="mistisledruid" log="true" repeatable="false" interval="2592000" file="mistisledruid.xml"/>
+	<raid name="necropolisbeholder" log="true" repeatable="false" interval="1209600" file="necropolisbeholder.xml"/>
+	<raid name="northroadoutlaws" log="true" repeatable="false" interval="604800" file="northroadoutlaws.xml"/>
+	<raid name="orclandorc" log="true" repeatable="false" interval="1209600" file="orclandorc.xml"/>
+	<raid name="pohdemodras" log="true" repeatable="false" interval="1209600" file="pohdemodras.xml"/>
+	<raid name="pohwidow" log="true" repeatable="false" interval="2419200" file="pohwidow.xml"/>
+	<raid name="rookgaardrats" log="true" repeatable="false" interval="86400" file="rookgaardrats.xml"/>
+	<raid name="shadowthorndharalion" log="true" repeatable="false" interval="1209600" file="shadowthorndharalion.xml"/>
+	<raid name="stonehomeghoulattack" log="true" repeatable="false" interval="1209600" file="stonehomeghoulattack.xml"/>
+	<raid name="thaiscaverats" log="true" repeatable="false" interval="604800" file="thaiscaverats.xml"/>
+	<raid name="thaislighthouseorcs" log="true" repeatable="false" interval="604800" file="thaislighthouseorcs.xml"/>
+	<raid name="thaisorcinvasion" log="true" repeatable="false" interval="15552000" file="thaisorcinvasion.xml"/>
+	<raid name="venoreelfinvasion" log="true" repeatable="false" interval="15552000" file="venoreelfinvasion.xml"/>
+	<raid name="venoreswampelves" log="true" repeatable="false" interval="1209600" file="venoreswampelves.xml"/>
+</raids>

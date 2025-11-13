@@ -1,0 +1,11 @@
+"wooden","shield"   -> Type=2512, Amount=1, Price=15, "Do you want to buy a wooden shield for %P gold?", Topic=22
+"studded","shield"  -> Type=2526, Amount=1, Price=50, "Do you want to buy a studded shield for %P gold?", Topic=22
+"steel","shield"    -> Type=2509, Amount=1, Price=240, "Do you want to buy a steel shield for %P gold?", Topic=22
+"brass","shield"    -> Type=2511, Amount=1, Price=65,  "Do you want to buy a brass shield for %P gold?", Topic=22
+"plate","shield"    -> Type=2510, Amount=1, Price=125, "Do you want to buy a plate shield for %P gold?", Topic=22
+"dwarven","shield"  -> Type=2525, Amount=1, Price=500, "Do you want to buy a dwarven shield for %P gold?", Topic=22
+
+
+Topic=22,"yes",CountMoney>=Price -> "Thank you. Here it is.", DeleteMoney, Create(Type) 
+Topic=22,"yes"                   -> "Sorry, you do not have enough gold." 
+Topic=22                         -> "Maybe you will buy it another time." 

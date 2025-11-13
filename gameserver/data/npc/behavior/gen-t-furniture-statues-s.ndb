@@ -1,0 +1,9 @@
+"statue"               -> "What statue would you like? A knights statue, a minotaur statue or a goblin statue?"
+"knight", "statue"     -> Type=1442, Amount=1, Price=50, "Do you want to buy this wonderful statue for %P gold?", Topic=81
+"minotaur", "statue"   -> Type=1446, Amount=1, Price=50, "Do you want to buy this frigtening statue for %P gold?", Topic=81
+"goblin", "statue"      -> Type=1447, Amount=1, Price=50, "Do you want to buy this disgusting statue for %P gold?", Topic=81
+
+Topic=81,"yes",Premium,CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)
+Topic=81,"yes",CountMoney>=Price         -> "I'm sorry, but you need a premium account if you want to buy furniture."
+Topic=81,"yes"                           -> "Come back, when you have enough money."
+Topic=81                                 -> "Hmm, but I'm sure, it would fit nicely into your house."

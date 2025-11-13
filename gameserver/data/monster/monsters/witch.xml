@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Witch" nameDescription="a witch" race="blood" experience="120" speed="62" manacost="0">
+	<health now="300" max="300" />
+	<look type="54" head="0" body="0" legs="0" feet="0" corpse="3065" />
+	<targetchange chance="50" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="4" />
+		<flag runonhealth="30" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1500" skillnextlevel="100" skilladdcount="1" skill="18" attack="18" />
+		<attack name="firefield" delay="8" range="7" radius="1" target="1">
+			<attribute key="shooteffect" value="fire" />
+		</attack>
+		<attack name="fire" delay="5" min="-25" max="-55" range="7">
+			<attribute key="shooteffect" value="fire" />
+		</attack>
+	</attacks>
+	<defenses armor="8" defense="12">
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="1" />
+		<immunity poison="1" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="0" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices>
+		<voice sentence="Horax pokti!" />
+		<voice sentence="Hihihihi!" />
+		<voice sentence="Herba budinia ex!" />
+	</voices>
+	<loot>
+		<item id="2129" countmax="1" chance="10000"/><!-- wolf tooth chain -->		
+		<item id="2800" countmax="1" chance="9000"/><!-- star herb -->
+		<item id="2402" countmax="1" chance="500"/><!-- silver dagger -->
+		<item id="2405" countmax="1" chance="40000"/><!-- sickle -->
+		<item id="2643" countmax="1" chance="50000"/><!-- leather boots -->
+		<item id="2148" countmax="10" chance="10000"/><!-- gold coin -->
+		<item id="2199" countmax="1" chance="2500"/><!-- garlic necklace -->
+		<item id="2687" countmax="8" chance="30000"/><!-- cookie -->
+		<item id="2651" countmax="1" chance="20000"/><!-- coat -->
+		<item id="2696" countmax="1" chance="40000"/><!-- cheese -->
+		<item id="2654" countmax="1" chance="50000"/><!-- cape -->
+		<item id="2551" countmax="1" chance="20000"/><!-- broom -->
+	</loot>
+</monster>

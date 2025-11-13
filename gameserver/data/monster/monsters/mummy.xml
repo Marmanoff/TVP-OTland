@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Mummy" nameDescription="a mummy" race="undead" experience="150" speed="35" manacost="510">
+	<health now="240" max="240" />
+	<look type="65" head="0" body="0" legs="0" feet="0" corpse="2949" />
+	<targetchange chance="0" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1500" skillnextlevel="100" skilladdcount="1" skill="50" attack="32" poisoncycles="65" />
+		<attack name="speed" delay="13" duration="10000" speed="-80" speedvariation="40" range="7">
+			<attribute key="areaeffect" value="redshimmer" />
+		</attack>
+		<attack name="lifedrain" delay="7" min="-30" max="-40" range="1" />
+	</attacks>
+	<defenses armor="14" defense="23">
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="1" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices>
+		<voice sentence="I will ssswallow your sssoul!" />
+		<voice sentence="Ahkahra exura belil mort!" />
+		<voice sentence="Yohag Sssetham!" />
+		<voice sentence="I will tassste life again!" />
+		<voice sentence="Mort ulhegh dakh visss." />
+		<voice sentence="Flesssh to dussst!" />
+	</voices>
+	<loot>
+		<item id="2161" countmax="1" chance="5000"/><!-- strange talisman -->
+		<item id="2134" countmax="1" chance="4000"/><!-- silver brooch -->
+		<item id="2170" countmax="1" chance="100"/><!-- silver amulet -->
+		<item id="2406" countmax="1" chance="8000"/><!-- short sword -->
+		<item id="2411" countmax="1" chance="2500"/><!-- poison dagger -->
+		<item id="2162" countmax="1" chance="16000"/><!-- magic light wand -->
+		<item id="2148" countmax="80" chance="40000"/><!-- gold coin -->
+		<item id="2124" countmax="1" chance="1500"/><!-- crystal ring -->
+		<item id="2529" countmax="1" chance="200"/><!-- black shield -->
+		<item id="2144" countmax="1" chance="1000"/><!-- black pearl -->
+	</loot>
+</monster>

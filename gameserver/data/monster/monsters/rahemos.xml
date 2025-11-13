@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Rahemos" race="undead" experience="3100" speed="100" manacost="0">
+	<health now="3700" max="3700" />
+	<look type="88" head="0" body="0" legs="0" feet="0" corpse="3034" />
+	<targetchange chance="3" />
+	<targetstrategy nearest="80" weakest="10" mostdamage="10" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="0" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1500" skillnextlevel="100" skilladdcount="1" skill="55" attack="40" poisoncycles="65" />
+		<attack name="outfit" monster="Pig" delay="7" duration="12000" range="7">
+			<attribute key="areaeffect" value="blueshimmer" />
+		</attack>
+		<attack name="drunk" duration="50" drunkenness="3" delay="13" range="7">
+			<attribute key="shooteffect" value="energy" />
+			<attribute key="areaeffect" value="teleport" />
+		</attack>
+		<attack name="speed" delay="8" duration="50000" speed="-100" speedvariation="10" range="7">
+			<attribute key="areaeffect" value="redshimmer" />
+		</attack>
+		<attack name="physical" delay="5" min="-200" max="-600" range="7">
+			<attribute key="shooteffect" value="death" />
+			<attribute key="areaeffect" value="mortarea" />
+		</attack>
+		<attack name="energy" delay="5" min="-200" max="-600" range="7">
+			<attribute key="shooteffect" value="energy" />
+			<attribute key="areaeffect" value="energy" />
+		</attack>
+		<attack name="lifedrain" delay="15" min="-50" max="-750" range="1" />
+	</attacks>
+	<defenses armor="40" defense="65">
+		<defense name="outfit" monster="Demon" delay="20" duration="4000">
+			<attribute key="areaeffect" value="blueshimmer" />
+		</defense>
+		<defense name="healing" delay="5" min="200" max="500">
+			<attribute key="areaeffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity fire="1" />
+		<immunity energy="1" />
+		<immunity poison="1" />
+		<immunity physical="0" />
+		<immunity outfit="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<summons maxSummons="1">
+		<summon name="Demon" max="1" delay="9" />
+	</summons>
+	<voices>
+		<voice sentence="It's a kind of magic." />
+		<voice sentence="Abrah Kadabrah!" />
+		<voice sentence="Nothing hidden in my warpings." />
+		<voice sentence="It's not a trick, it's Rahemos." />
+		<voice sentence="Meet my dear friend from hell." />
+		<voice sentence="I will make you believe in magic." />
+	</voices>
+	<loot>
+		<item id="2153" countmax="1" chance="1000" /><!-- violet gem -->
+		<item id="2447" countmax="1" chance="100" /><!-- twin axe -->
+		<item id="2150" countmax="3" chance="10000" /><!-- small amethyst -->
+		<item id="2214" countmax="1" chance="5000" /><!-- ring of healing -->
+		<item id="2176" countmax="1" chance="500" /><!-- orb -->
+		<item id="2662" countmax="1" chance="2000" /><!-- magician hat -->
+		<item id="2148" countmax="95" chance="35000" /><!-- gold coin -->
+		<item id="2148" countmax="85" chance="50000" /><!-- gold coin -->
+		<item id="2148" countmax="80" chance="70000" /><!-- gold coin -->
+		<item id="2184" countmax="1" chance="100" /><!-- crystal wand -->
+		<item id="2348" countmax="1" chance="100000" /><!-- ancient rune -->
+	</loot>
+</monster>

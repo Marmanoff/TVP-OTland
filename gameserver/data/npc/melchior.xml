@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Melchior" behavior="melchior.npc" walkradius="60" walkinterval="2000" speed="15" floorchange="0">
+  <look type="130" head="0" body="25" legs="59" feet="115" />
+</npc>

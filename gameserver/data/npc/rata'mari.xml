@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Rata'mari" behavior="rata'mari.npc" walkradius="1" walkinterval="2000" speed="10" floorchange="0">
+  <look type="21" head="0" body="0" legs="0" feet="0" />
+</npc>

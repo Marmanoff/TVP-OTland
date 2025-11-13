@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Orc Shaman" nameDescription="an orc shaman" race="blood" experience="110" speed="30" manacost="0">
+	<health now="115" max="115" />
+	<look type="6" head="0" body="0" legs="0" feet="0" corpse="2860" />
+	<targetchange chance="50" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="4" />
+		<flag runonhealth="15" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1200" skillnextlevel="100" skilladdcount="1" skill="20" attack="13" />
+		<attack name="fire" delay="13" min="-5" max="-45" range="7" radius="1" target="1">
+			<attribute key="shooteffect" value="fire" />
+			<attribute key="areaeffect" value="firearea" />
+		</attack>
+		<attack name="energy" delay="8" min="-20" max="-30" range="7">
+			<attribute key="shooteffect" value="energy" />
+			<attribute key="areaeffect" value="energy" />
+		</attack>
+	</attacks>
+	<defenses armor="8" defense="10">
+		<defense name="healing" delay="4" min="27" max="43">
+			<attribute key="areaeffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="1" />
+		<immunity poison="1" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="0" />
+		<immunity invisible="1" />
+	</immunities>
+	<summons maxSummons="4">
+		<summon name="Snake" max="4" delay="4" />
+	</summons>
+	<voices>
+		<voice sentence="Grak brrretz gulu." />
+		<voice sentence="Huumans stinkk!" />
+	</voices>
+	<loot>
+		<item id="2190" countmax="1" chance="1"/><!-- blue spell wand -->
+		<item id="2401" countmax="1" chance="7000"/><!-- staff -->
+		<item id="2389" countmax="1" chance="10000"/><!-- spear -->
+		<item id="2148" countmax="5" chance="90000"/><!-- gold coin -->
+		<item id="2686" countmax="2" chance="11000"/><!-- corncob -->
+		<item id="1987" countmax="1" chance="11000"/><!-- bag -->
+		<item id="2458" countmax="1" chance="9000"/><!-- chain helmet -->
+		<item id="2464" countmax="1" chance="9000"/><!-- chain armor -->
+		<item id="1973" countmax="1" chance="4500"/><!-- book -->
+	</loot>
+</monster>

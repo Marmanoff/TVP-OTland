@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Ustan" behavior="ustan.npc" walkradius="0" walkinterval="2000" speed="2" floorchange="0">
+  <look type="132" head="0" body="24" legs="13" feet="76" />
+</npc>

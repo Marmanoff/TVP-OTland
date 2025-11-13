@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Scarab" nameDescription="a scarab" race="venom" experience="120" speed="40" manacost="395">
+	<health now="320" max="320" />
+	<look type="83" head="0" body="0" legs="0" feet="0" corpse="3013" />
+	<targetchange chance="0" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag convinceable="1" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="80" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1500" skillnextlevel="50" skilladdcount="1" skill="42" attack="25" />
+		<attack name="poison" delay="6" min="-15" max="-25" range="1" radius="1" target="1">
+			<attribute key="areaeffect" value="poison" />
+		</attack>
+		<attack name="poisonfield" delay="5" radius="1" target="0">
+			<attribute key="areaeffect" value="poff" />
+		</attack>
+	</attacks>
+	<defenses armor="21" defense="26">
+		<defense name="speed" delay="20" duration="4000" speed="45" speedvariation="5">
+			<attribute key="areaeffect" value="redshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="1" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="1" />
+		<immunity invisible="0" />
+	</immunities>
+	<loot>
+		<item id="2149" countmax="1" chance="300" /><!-- small emerald -->
+		<item id="2150" countmax="1" chance="500" /><!-- small amethyst -->
+		<item id="2159" countmax="1" chance="100" /><!-- scarab coin -->
+		<item id="2159" countmax="1" chance="1000" /><!-- scarab coin -->
+		<item id="2666" countmax="2" chance="54000" /><!-- meat -->
+		<item id="2442" countmax="1" chance="500" /><!-- heavy machete -->
+		<item id="2148" countmax="40" chance="44500" /><!-- gold coin -->
+		<item id="2148" countmax="12" chance="70500" /><!-- gold coin -->
+		<item id="2439" countmax="1" chance="300" /><!-- daramanian mace -->
+		<item id="2544" countmax="3" chance="5000" /><!-- arrow -->
+	</loot>
+</monster>

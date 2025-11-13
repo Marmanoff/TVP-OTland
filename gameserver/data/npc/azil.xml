@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Azil" behavior="azil.npc" walkradius="0" walkinterval="2000" speed="7" floorchange="0">
+  <look type="129" head="95" body="10" legs="12" feet="119" />
+</npc>

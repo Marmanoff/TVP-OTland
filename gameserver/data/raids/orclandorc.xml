@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raid>
+	<!-- Do not announce this orc spawn! -->
+	<!-- <announce delay="1000" type="event" message="The orc is out!"/> -->
+	<areaspawn delay="1000" radius="2" centerx="32975" centery="31743" centerz="7">
+		<monster name="orc" minamount="1" maxamount="1" lifetime="7200000" >
+			<loot item="3960" countmax="1" chance="100000"/>
+		</monster>
+	</areaspawn>
+</raid>

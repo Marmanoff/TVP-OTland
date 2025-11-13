@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Morun" behavior="morun.npc" walkradius="2" walkinterval="2000" speed="6" floorchange="0">
+  <look type="129" head="95" body="5" legs="26" feet="76" />
+</npc>

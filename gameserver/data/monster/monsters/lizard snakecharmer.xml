@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Lizard Snakecharmer" nameDescription="a lizard snakecharmer" race="blood" experience="200" speed="52" manacost="0">
+	<health now="325" max="325" />
+	<look type="115" head="0" body="0" legs="0" feet="0" corpse="4262" />
+	<targetchange chance="50" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="1" />
+		<flag pushable="1" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="4" />
+		<flag runonhealth="15" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1200" skillnextlevel="100" skilladdcount="1" skill="28" attack="18" />
+		<attack name="poison" delay="6" min="-50" max="-100" range="7" radius="1" target="1">
+			<attribute key="shooteffect" value="poison" />
+			<attribute key="areaeffect" value="greenbubble" />
+		</attack>
+		<attack name="poisoncondition" delay="9" cycle="170" mincycle="30" range="7">
+			<attribute key="shooteffect" value="poison" />
+			<attribute key="areaeffect" value="poison" />
+		</attack>
+	</attacks>
+	<defenses armor="22" defense="15">
+		<defense name="healing" delay="3" min="50" max="100">
+			<attribute key="areaeffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="1" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="0" />
+		<immunity invisible="1" />
+	</immunities>
+	<summons maxSummons="6">
+		<summon name="Cobra" max="6" delay="4" />
+	</summons>
+	<voices>
+		<voice sentence="Shhhhhhhh." />
+		<voice sentence="I ssssmell warm blood!" />
+	</voices>
+	<loot>
+		<item id="2154" countmax="1" chance="200"/><!-- yellow gem -->		
+		<item id="2150" countmax="1" chance="500"/><!-- small amethyst -->		
+		<item id="2168" countmax="1" chance="200"/><!-- life ring -->
+		<item id="2177" countmax="1" chance="1000"/><!-- life crystal -->
+		<item id="2148" countmax="25" chance="80000"/><!-- gold coin -->
+		<item id="2237" countmax="1" chance="19900"/><!-- dirty cape -->
+		<item id="2817" countmax="1" chance="70000"/><!-- dead snake -->
+		<item id="3971" countmax="1" chance="100"/><!-- charmer's tiara -->
+		<item id="2654" countmax="1" chance="9000"/><!-- cape -->
+	</loot>
+</monster>

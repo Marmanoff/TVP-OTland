@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Carniphila" nameDescription="a carniphila" race="venom" experience="150" speed="15" manacost="490">
+	<health now="255" max="255" />
+	<look type="120" head="0" body="0" legs="0" feet="0" corpse="4280" />
+	<targetchange chance="5" />
+	<targetstrategy nearest="70" weakest="0" mostdamage="30" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="0" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="2000" skillnextlevel="100" skilladdcount="1" skill="40" attack="40" poisoncycles="95" />
+		<attack name="poison" delay="9" min="-40" max="-130" radius="3" target="0">
+			<attribute key="areaeffect" value="poison" />
+		</attack>
+		<attack name="speed" delay="3" duration="30000" speed="-135" speedvariation="25" range="7">
+			<attribute key="shooteffect" value="poison" />
+			<attribute key="areaeffect" value="greenspark" />
+		</attack>
+		<attack name="poison" delay="4" min="-60" max="-90" range="7">
+			<attribute key="shooteffect" value="poison" />
+			<attribute key="areaeffect" value="greenspark" />
+		</attack>
+	</attacks>
+	<defenses armor="26" defense="20">
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="1" />
+		<immunity physical="0" />
+		<immunity outfit="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="0" />
+		<immunity invisible="1" />
+	</immunities>
+	<loot>
+		<item id="2802" countmax="1" chance="500" /><!-- sling herb -->
+		<item id="2802" countmax="1" chance="500" /><!-- sling herb -->
+		<item id="2804" countmax="1" chance="1000" /><!-- shadow herb -->
+		<item id="2666" countmax="2" chance="70000" /><!-- meat -->
+		<item id="2671" countmax="1" chance="40000" /><!-- ham -->
+		<item id="2747" countmax="1" chance="500" /><!-- grave flower -->
+		<item id="2148" countmax="10" chance="40000" /><!-- gold coin -->
+		<item id="2148" countmax="30" chance="80000" /><!-- gold coin -->
+		<item id="2792" countmax="1" chance="8000" /><!-- dark mushroom -->
+	</loot>
+</monster>

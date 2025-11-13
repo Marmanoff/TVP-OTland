@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Elvith" behavior="elvith.npc" walkradius="1" walkinterval="2000" speed="10" floorchange="0">
+  <look type="144" head="76" body="3" legs="0" feet="76" />
+</npc>

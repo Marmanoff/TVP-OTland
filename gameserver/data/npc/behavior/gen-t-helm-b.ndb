@@ -1,0 +1,25 @@
+"sell","leather","helmet" -> Type=2461, Amount=1, Price=4,   "Do you want to sell a leather helmet for %P gold?", Topic=50
+"sell","chain","helmet"   -> Type=2458, Amount=1, Price=17,  "Do you want to sell a chain helmet for %P gold?", Topic=50
+"sell","steel","helmet"   -> Type=2457, Amount=1, Price=190, "Do you want to sell a steel helmet for %P gold?", Topic=50
+"sell","brass","helmet"   -> Type=2460, Amount=1, Price=30,  "Do you want to sell a brass helmet for %P gold?", Topic=50
+"sell","viking","helmet"  -> Type=2473, Amount=1, Price=66,  "Do you want to sell a viking helmet for %P gold?", Topic=50
+"sell","iron","helmet"    -> Type=2459, Amount=1, Price=145, "You want sell a iron helmet for %P gold?", Topic=50
+"sell","devil","helmet"   -> Type=2462, Amount=1, Price=450, "You want sell a devil's helmet for %P gold?", Topic=50
+"sell","warrior","helmet" -> Type=2475, Amount=1, Price=696, "You want sell a warrior helmet for %P gold?", Topic=50
+
+"sell",%1,1<%1,"leather","helm" -> Type=2461, Amount=%1, Price=4*%1,   "Do you want to sell %A leather helmets for %P gold?", Topic=50
+"sell",%1,1<%1,"chain","helm"   -> Type=2458, Amount=%1, Price=17*%1,  "Do you want to sell %A chain helmets for %P gold?", Topic=50
+"sell",%1,1<%1,"steel","helm"   -> Type=2457, Amount=%1, Price=190*%1, "Do you want to sell %A steel helmets for %P gold?", Topic=50
+"sell",%1,1<%1,"brass","helm"   -> Type=2460, Amount=%1, Price=30*%1,  "Do you want to sell %A brass helmets for %P gold?", Topic=50
+"sell",%1,1<%1,"viking","helm"  -> Type=2473, Amount=%1, Price=66*%1,  "Do you want to sell %A viking helmets for %P gold?", Topic=50
+"sell",%1,1<%1,"iron","helmet"  -> Type=2459, Amount=%1, Price=145*%1, "You want sell %A iron helmets for %P gold?", Topic=50
+"sell",%1,1<%1,"devil","helmet" -> Type=2462, Amount=%1, Price=450*%1, "You want sell %A devil's helmets for %P gold?", Topic=50
+"sell",%1,1<%1,"warrior","helmet" -> Type=2475, Amount=%1, Price=696*%1, "You want sell %A warrior helmets for %P gold?", Topic=50
+
+
+
+Topic=50,"yes",Count(Type)>=Amount -> "Ok. Here is your money.", Delete(Type), CreateMoney
+Topic=50,"yes"                             -> "Sorry, you do not have one."
+Topic=50,"yes",Amount>1                    -> "Sorry, you do not have so much."
+Topic=50                                   -> "Maybe next time."
+

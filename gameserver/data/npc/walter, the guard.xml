@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Walter, the guard" behavior="walter, the guard.npc" walkradius="2" walkinterval="2000" speed="6" floorchange="0">
+  <look type="131" head="19" body="19" legs="19" feet="19" />
+</npc>

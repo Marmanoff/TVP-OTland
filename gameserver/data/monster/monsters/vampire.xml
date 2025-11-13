@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Vampire" nameDescription="a vampire" race="undead" experience="290" speed="70" manacost="0">
+	<health now="450" max="450" />
+	<look type="68" head="0" body="0" legs="0" feet="0" corpse="2956" />
+	<targetchange chance="5" />
+	<targetstrategy nearest="70" weakest="30" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1500" skillnextlevel="100" skilladdcount="1" skill="65" attack="42" />
+		<attack name="speed" delay="9" duration="30000" speed="-70" speedvariation="20" range="7">
+			<attribute key="areaeffect" value="redshimmer" />
+		</attack>
+		<attack name="lifedrain" delay="5" min="-55" max="-105" range="1" />
+	</attacks>
+	<defenses armor="27" defense="38">
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="1" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices>
+		<voice sentence="BLOOD!" yell="1" />
+		<voice sentence="Let me kiss your neck." />
+		<voice sentence="I smell warm blood." />
+		<voice sentence="I call you, my bats! Come!" />
+	</voices>
+	<loot>
+		<item id="2534" countmax="1" chance="100" /><!-- vampire shield -->
+		<item id="2479" countmax="1" chance="400" /><!-- strange helmet -->
+		<item id="2383" countmax="1" chance="1000" /><!-- spike sword -->
+		<item id="2229" countmax="1" chance="10000" /><!-- skull -->
+		<item id="2649" countmax="1" chance="8000" /><!-- leather legs -->
+		<item id="2412" countmax="1" chance="15000" /><!-- katana -->
+		<item id="2396" countmax="1" chance="300" /><!-- ice rapier -->
+		<item id="2747" countmax="1" chance="18000" /><!-- grave flower -->
+		<item id="2148" countmax="20" chance="15000" /><!-- gold coin -->
+		<item id="2127" countmax="1" chance="200" /><!-- emerald bangle -->
+		<item id="2172" countmax="1" chance="200" /><!-- bronze amulet -->
+		<item id="2032" countmax="1" chance="11000" /><!-- bowl -->
+		<item id="2144" countmax="1" chance="1500" /><!-- black pearl -->
+	</loot>
+</monster>

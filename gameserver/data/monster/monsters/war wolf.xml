@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="War Wolf" nameDescription="a war wolf" race="blood" experience="55" speed="92" manacost="420">
+	<health now="140" max="140" />
+	<look type="3" head="0" body="0" legs="0" feet="0" corpse="2969" />
+	<targetchange chance="0" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag convinceable="1" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="2000" skillnextlevel="100" skilladdcount="1" skill="39" attack="24" />
+	</attacks>
+	<defenses armor="8" defense="16">
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="0" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="0" />
+		<immunity invisible="0" />
+	</immunities>
+	<voices>
+		<voice sentence="Grrrrrrr" />
+		<voice sentence="Yoooohhuuuu!" yell="1" />
+	</voices>
+	<loot>
+		<item id="2666" countmax="4" chance="70000" /><!-- meat -->
+		<item id="2671" countmax="2" chance="40000" /><!-- ham -->
+	</loot>
+</monster>

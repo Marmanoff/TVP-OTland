@@ -1,0 +1,12 @@
+Behavior = {
+ADDRESS,"hello$",! -> NOP
+ADDRESS,"hi$",!    -> NOP
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> NOP
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> NOP
+
+"bye"       -> Idle
+
+}

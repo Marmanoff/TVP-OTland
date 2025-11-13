@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="A Prisoner" behavior="a prisoner.npc" walkradius="2" walkinterval="2000" speed="25" floorchange="0">
+  <look type="130" head="81" body="40" legs="55" feet="94" />
+</npc>

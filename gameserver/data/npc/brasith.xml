@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Brasith" behavior="brasith.npc" walkradius="1" walkinterval="2000" speed="10" floorchange="0">
+  <look type="144" head="60" body="94" legs="58" feet="76" />
+</npc>

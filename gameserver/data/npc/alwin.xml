@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Alwin" behavior="alwin.npc" walkradius="10" walkinterval="2000" speed="6" floorchange="0">
+  <look type="131" head="113" body="113" legs="113" feet="115" />
+</npc>

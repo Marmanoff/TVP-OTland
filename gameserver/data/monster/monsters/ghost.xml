@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Ghost" nameDescription="a ghost" race="undead" experience="120" speed="40" manacost="0">
+	<health now="150" max="150" />
+	<look type="48" head="0" body="0" legs="0" feet="0" corpse="2913" />
+	<targetchange chance="0" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1500" skillnextlevel="100" skilladdcount="1" skill="45" attack="28" />
+		<attack name="lifedrain" delay="7" min="-25" max="-45" range="1" />
+	</attacks>
+	<defenses armor="10" defense="20">
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="1" />
+		<immunity physical="1" />
+		<immunity outfit="0" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="0" />
+	</immunities>
+	<voices>
+		<voice sentence="Huh!" />
+		<voice sentence="Shhhhhh" />
+		<voice sentence="Buuuuuh" />
+	</voices>
+	<loot>
+		<item id="2182" countmax="1" chance="1"/><!-- golden spell wand -->
+		<item id="2165" countmax="1" chance="200"/><!-- stealth ring -->
+		<item id="2804" countmax="1" chance="15000"/><!-- shadow herb -->
+		<item id="2642" countmax="1" chance="20000"/><!-- sandals -->
+		<item id="2394" countmax="1" chance="11000"/><!-- morning star -->
+		<item id="2404" countmax="1" chance="7000"/><!-- combat knife -->
+		<item id="2654" countmax="1" chance="9000"/><!-- cape -->
+		<item id="1977" countmax="1" chance="1500"/><!-- book -->
+		<item id="2532" countmax="1" chance="800"/><!-- ancient shield -->
+	</loot>
+</monster>

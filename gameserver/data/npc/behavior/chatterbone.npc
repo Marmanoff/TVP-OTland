@@ -1,0 +1,115 @@
+Behavior = {
+ADDRESS,"hello$",! -> "... Greeeeeetiiiingssss"
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "... Wait... %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "... Good... Bye"
+
+"bye"             -> "... Good... Bye", Idle
+"farewell"        -> *
+"job"             -> "... Selling Spells"
+"name"            -> "... Chatterbone"
+"time"            -> "... Time?... Not important... anymore."
+"king"            -> "..."
+"tibianus"        -> *
+"vladruc"         -> "... Maaaaassssterrrrr" 
+"urghain"         -> * 
+"ferumbras"       -> "... un...important"
+"market"          -> "... You buy?"
+"excalibug"       -> "... we hid it... so long ago... so long..."
+"news"            -> "... they build a new city... Carlin shall be its name..."
+"flaming","pit"   -> "... we conquered them... held them so long... long ago..."
+"pits","inferno"  -> *
+"nightmare","pit" -> *
+
+"sorcerer"        -> "... You... buy spells?"
+"power"           -> *
+"druid"           -> "... Ask Smiley..."
+"spellbook"       -> "... You buy book... store spells... other counter..."
+"rune"            -> "... Runes... mighty stones... other counter..."
+Sorcerer,"spell"  -> "... Spells... rune spells... instant spells... what you want? ... Or for which level?", Topic=2
+"spell"           -> "... Only sorcerers..."
+
+Topic=2,"rune","spell"        -> "... Attack rune spells ...  support rune spells ... Which...?"
+Topic=2,"instant","spell"     -> "... Attack spells ... healing spells ... supply spells ... support spells ... summon spells. Which...?"
+Topic=2,"level"               -> "Which level...?", Topic=2
+Topic=2,"bye"                 -> "... Good... Bye", Idle
+
+Sorcerer,"level"               -> "Which level...?", Topic=2
+Sorcerer,"rune","spell"        -> "... Attack rune spells ...  support rune spells ... Which...?"
+Sorcerer,"instant","spell"     -> "... Attack spells ... healing spells ... supply spells ... support spells ... summon spells. Which...?"
+
+Sorcerer,"attack","rune","spell"  ->  "... Missile rune spells ... explosive rune spells ... field rune spells ... wall rune spells ... bomb rune spells."
+Sorcerer,"support","rune","spell" ->  "In this category ... 'Destroy Field'."
+
+Sorcerer,"missile","rune","spell"   -> "In this category ... 'Light Magic Missile', 'Heavy Magic Missile' and 'Sudden Death'."
+Sorcerer,"explosive","rune","spell" -> "In this category ... 'Fireball', 'Great Fireball' and 'Explosion'."
+Sorcerer,"field","rune","spell"     -> "In this category ... 'Poison Field', 'Fire Field' and 'Energy Field'."
+Sorcerer,"wall","rune","spell"      -> "In this category ... 'Fire Wall', 'Poison Wall' and 'Energy Wall'."
+Sorcerer,"bomb","rune","spell"      -> "In this category ... 'Firebomb'."
+
+Sorcerer,"attack","spell"           -> "In this category ... 'Fire Wave', 'Energy Wave', 'Energy Beam' and 'Great Energy Beam'."
+Sorcerer,"healing","spell"          -> "In this category ... 'Light Healing', 'Intense Healing', 'Ultimate Healing' and 'Antidote'."
+Sorcerer,"support","spell"          -> "In this category ... 'Find Person', 'Light', 'Great Light', 'Magic Shield', 'Creature Illusion' and 'Invisible'."
+Sorcerer,"summon","spell"           -> "In this category ... 'Summon Creature'."
+
+Sorcerer,"find","person"         -> String="Find Person", Price=80,   "... You want 'Find Person' for %P gold?", Topic=3
+Sorcerer,"light"                 -> String="Light", Price=100,  "... You want 'Light' for %P gold?", Topic=3
+Sorcerer,"light","healing"       -> String="Light Healing",  Price=170,  "... You want 'Light Healing' for %P gold?", Topic=3
+Sorcerer,"light","missile"       -> String="Light Magic Missile",  Price=200,  "... You want 'Light Magic Missile' for %P gold?", Topic=3
+Sorcerer,"antidote"              -> String="Antidote", Price=150,  "... You want 'Antidote' for %P gold?", Topic=3
+Sorcerer,"intense","healing"     -> String="Intense Healing",  Price=350,  "... You want 'Intense Healing' for %P gold?", Topic=3
+Sorcerer,"poison","field"        -> String="Poison Field", Price=300,  "... You want 'Poison Field' for %P gold?", Topic=3
+Sorcerer,"great","light"         -> String="Great Light", Price=500,  "... You want 'Great Light' for %P gold?", Topic=3
+Sorcerer,"fire","field"          -> String="Fire Field", Price=500,  "... You want 'Fire Field' for %P gold?", Topic=3
+Sorcerer,"heavy","missile"       -> String="Heavy Magic Missile",  Price=600,  "... You want 'Heavy Magic Missile' for %P gold?", Topic=3
+Sorcerer,"magic","shield"        -> String="Magic Shield", Price=450,  "... You want 'Magic Shield' for %P gold?", Topic=3
+Sorcerer,"fireball"              -> String="Fireball", Price=800,  "... You want 'Fireball' for %P gold?", Topic=3
+Sorcerer,"energy","field"        -> String="Energy Field", Price=700,  "... You want 'Energy Field' for %P gold?", Topic=3
+Sorcerer,"destroy","field"       -> String="Destroy Field", Price=350,  "... You want 'Destroy Field' for %P gold?", Topic=3
+Sorcerer,"fire","wave"           -> String="Fire Wave", Price=850,  "... You want 'Fire Wave' for %P gold?", Topic=3
+Sorcerer,"ultimate","healing"    -> String="Ultimate Healing",  Price=1000, "... You want 'Ultimate Healing' for %P gold?", Topic=3
+Sorcerer,"great","fireball"      -> String="Great Fireball", Price=1200, "... You want 'Great Fireball' for %P gold?", Topic=3
+Sorcerer,"fire","bomb"           -> String="Firebomb", Price=1500, "... You want 'Fire Bomb' for %P gold?", Topic=3
+Sorcerer,"energy","beam"         -> String="Energy Beam", Price=1000, "... You want 'Energy Beam' for %P gold?", Topic=3
+Sorcerer,"creature","illusion"   -> String="Creature Illusion", Price=1000, "... You want 'Creature Illusion' for %P gold?", Topic=3
+Sorcerer,"poison","wall"         -> String="Poison Wall", Price=1600, "... You want 'Poison Wall' for %P gold?", Topic=3
+Sorcerer,"explosion"             -> String="Explosion", Price=1800, "... You want 'Explosion' for %P gold?", Topic=3
+Sorcerer,"fire","wall"           -> String="Fire Wall", Price=2000, "... You want 'Fire Wall' for %P gold?", Topic=3
+Sorcerer,"great","energy","beam" -> String="Great Energy Beam", Price=1800, "... You want 'Great Energy Beam' for %P gold?", Topic=3
+Sorcerer,"invisible"             -> String="Invisibility", Price=1000, "... You want 'Invisible' for %P gold?", Topic=3
+Sorcerer,"summon","creature"     -> String="Summon Creature",  Price=2000, "... You want 'Summon Creature' for %P gold?", Topic=3
+Sorcerer,"energy","wall"         -> String="Energy Wall", Price=2500, "... You want 'Energy Wall' for %P gold?", Topic=3
+Sorcerer,"energy","wave"         -> String="Energy Wave", Price=2500, "... You want 'Energy Wave' for %P gold?", Topic=3
+Sorcerer,"sudden","death"        -> String="Sudden Death", Price=3000, "... You want 'Sudden Death' for %P gold?", Topic=3
+
+Topic=2,"0$"	-> "... For magic level 0 ... 'Find Person' and 'Light'.", Topic=2
+Topic=2,"1$"	-> "... For magic level 1 ... 'Light Healing' and 'Light Magic Missile'.", Topic=2
+Topic=2,"2$"	-> "... For magic level 2 ... 'Antidote', 'Poison Field' and 'Intense Healing'.", Topic=2
+Topic=2,"3$"	-> "... For magic level 3 ... 'Great Light', 'Heavy Magic Missile' and 'Fire Field'.", Topic=2
+Topic=2,"4$"	-> "... For magic level 4 ... 'Magic Shield'.", Topic=2
+Topic=2,"5$"	-> "... For magic level 5 ... 'Fireball', 'Firebomb' and 'Energy Field'.", Topic=2
+Topic=2,"7$"	-> "... For magic level 7 ... 'Fire Wave'.", Topic=2
+Topic=2,"8$"	-> "... For magic level 8 ... 'Ultimate Healing'.", Topic=2
+Topic=2,"9$"	-> "... For magic level 9 ... 'Great Fireball'.", Topic=2
+Topic=2,"10$"	-> "... For magic level 10 ... 'Energy Beam' and 'Creature Illusion'.", Topic=2
+Topic=2,"11$"	-> "... For magic level 11 ... 'Poison Wall'.", Topic=2
+Topic=2,"12$"	-> "... For magic level 12 ... 'Explosion'.", Topic=2
+Topic=2,"13$"	-> "... For magic level 13 ... 'Fire Wall'.", Topic=2
+Topic=2,"14$"	-> "... For magic level 14 ... 'Great Energy Beam'.", Topic=2
+Topic=2,"15$"	-> "... For magic level 15 ... 'Invisible'.", Topic=2
+Topic=2,"16$"	-> "... For magic level 16 ... 'Summon Creature'.", Topic=2
+Topic=2,"18$"	-> "... For magic level 18 ... 'Energy Wall'.", Topic=2
+Topic=2,"20$"	-> "... For magic level 20 ... 'Energy Wave'.", Topic=2
+Topic=2,"25$"	-> "... For magic level 25 ... 'Sudden Death'.", Topic=2
+
+Topic=2       -> "... No spells for this magic level ... but for many ... from 0 to 25.", Topic=2
+
+Topic=3,"yes",SpellKnown(String)=1        -> "... You already know..."
+Topic=3,"yes",MagicLevel<SpellMagicLevel(String) -> Amount=SpellMagicLevel(String), "... not magic level %A..."
+Topic=3,"yes",CountMoney<Price            -> "... More money."
+Topic=3,"yes"                             -> "... Here...", DeleteMoney, EffectOpp(13), TeachSpell(String)
+Topic=3                                   -> "... Then not."
+}

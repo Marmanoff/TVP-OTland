@@ -1,0 +1,26 @@
+Behavior = {
+ADDRESS,"hello$",! -> "Welcome to Crunor's Finest Warehouse, %N."
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "One moment please, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Good bye."
+
+"bye"      -> "Good bye.", Idle
+"farewell" -> *
+"name"     -> "My name is Rose, nice to meet you, %N."
+"rose"     -> "That's me. I am not for sale. <giggles>"
+"job"      -> "Here you may buy some of the most beautiful flowers."
+"time"     -> "Sorry, I have no watch on me."
+"news"     -> "You mean my specials, don't you?"
+
+"offer"           -> "I am selling beautiful flowers here."
+"goods"           -> *
+"do","you","sell" -> *
+"do","you","have" -> *
+"furniture"       -> *
+"equipment"       -> *
+
+@"gen-t-furniture-flowers-s.ndb"
+}

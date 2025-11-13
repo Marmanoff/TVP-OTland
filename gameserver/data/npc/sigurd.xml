@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Sigurd" behavior="sigurd.npc" walkradius="8" walkinterval="2000" speed="3" floorchange="0">
+  <look type="69" head="0" body="0" legs="0" feet="0" />
+</npc>

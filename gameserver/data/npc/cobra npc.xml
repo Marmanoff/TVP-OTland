@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Cobra" behavior="cobra.npc" walkradius="0" walkinterval="0" speed="-40" floorchange="0">
+  <look typeex="1468" />
+</npc>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Minotaur Archer" nameDescription="a minotaur archer" race="blood" experience="65" speed="40" manacost="390">
+	<health now="100" max="100" />
+	<look type="24" head="0" body="0" legs="0" feet="0" corpse="2871" />
+	<targetchange chance="50" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag convinceable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="4" />
+		<flag runonhealth="10" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1500" skillnextlevel="100" skilladdcount="1" skill="20" attack="15" />
+		<attack name="physical" delay="3" min="-45" max="-85" range="7">
+			<attribute key="shooteffect" value="bolt" />
+		</attack>
+	</attacks>
+	<defenses armor="7" defense="8">
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="0" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="0" />
+		<immunity invisible="0" />
+	</immunities>
+	<voices>
+		<voice sentence="Ruan Wihmpy!" />
+		<voice sentence="Kaplar!" />
+	</voices>
+	<loot>
+		<item id="2481" countmax="1" chance="2000" /><!-- soldier helmet -->
+		<item id="2483" countmax="1" chance="1000" /><!-- scale armor -->
+		<item id="2666" countmax="1" chance="10000" /><!-- meat -->
+		<item id="2649" countmax="1" chance="5000" /><!-- leather legs -->
+		<item id="2461" countmax="1" chance="5000" /><!-- leather helmet -->
+		<item id="2148" countmax="20" chance="15000" /><!-- gold coin -->
+		<item id="2148" countmax="10" chance="70000" /><!-- gold coin -->
+		<item id="2455" countmax="1" chance="10000" /><!-- crossbow -->
+		<item id="2465" countmax="1" chance="2000" /><!-- brass armor -->
+		<item id="2543" countmax="5" chance="80000" /><!-- bolt -->
+		<item id="2543" countmax="15" chance="50000" /><!-- bolt -->
+	</loot>
+</monster>

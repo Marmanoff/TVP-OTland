@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Zerbrus" behavior="zerbrus.npc" walkradius="1" walkinterval="2000" speed="5" floorchange="0">
+  <look type="131" head="76" body="38" legs="76" feet="95" />
+</npc>

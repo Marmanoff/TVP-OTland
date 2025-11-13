@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Miraia" behavior="miraia.npc" walkradius="1" walkinterval="2000" speed="4" floorchange="0">
+  <look type="136" head="95" body="0" legs="7" feet="115" />
+</npc>

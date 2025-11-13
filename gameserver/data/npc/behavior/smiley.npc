@@ -1,0 +1,113 @@
+Behavior = {
+ADDRESS,"hello$",! -> "... Greeeeeetiiiingssss..."
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "... Wait... %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "... Good... Bye"
+
+"bye"       -> "... Good... Bye", Idle
+"farewell"  -> *
+"job"       -> "... Selling Spells"
+"name"      -> "... Smiley"
+"time"      -> "... Time?... Not important... anymore."
+"king"      -> "..."
+"tibianus"  -> *
+"vladruc"   -> "... Maaaaassssterrrrr" 
+"urghain"   -> * 
+"ferumbras" -> "... un...important"
+"market"    -> "... You buy?"
+"excalibug" -> "... only sell spells..."
+"news"      -> "... more spells..."
+
+"sorcerer"     -> "... Ask Chatterbone?"
+"druid"        -> "... You... buy spells?"
+"power"        -> *
+"spellbook"    -> "... You buy book... store spells... other counter..."
+"rune"         -> "... Runes... mighty stones... other counter..."
+Druid,"spell"  -> "... Spells... rune spells... instant spells... what you want? ... Or for which magic level?", Topic=2
+"spell"        -> "... Only druids..."
+
+Topic=2,"rune","spell"        -> "... Attack rune spells ... healing rune spells ... support rune spells ... summon rune spells. Which...?"
+Topic=2,"instant","spell"     -> "... Healing spells ... supply spells ... support spells ... summon spells. Which...?"
+Topic=2,"level"               -> "Which level...?", Topic=2
+Topic=2,"bye"                 -> "... Good... Bye", Idle
+
+Druid,"level"               -> "... Spell... which level...?", Topic=2
+Druid,"rune","spell"        -> "... Attack rune spells ... healing rune spells ... support rune spells ... summon rune spells. Which...?"
+Druid,"instant","spell"     ->  "... Healing spells ... supply spells ... support spells ... summon spells. Which...?"
+
+Druid,"attack","rune","spell"  ->  "... Missile rune spells ... explosive rune spells ... field rune spells ... wall rune spells ... bomb rune spells."
+Druid,"healing","rune","spell" ->  "In this category ... 'Intense Healing Rune', 'Antidote Rune' and 'Ultimate Healing Rune'."
+Druid,"support","rune","spell" ->  "In this category ... 'Destroy Field' and 'Chameleon'."
+Druid,"summon","rune","spell"  ->  "In this category ... 'Convince Creature'."
+
+Druid,"missile","rune","spell"   -> "In this category ... 'Light Magic Missile' and 'Heavy Magic Missile'."
+Druid,"explosive","rune","spell" -> "In this category ... 'Fireball', 'Great Fireball' and 'Explosion'."
+Druid,"field","rune","spell"     -> "In this category ... 'Poison Field', 'Fire Field' and 'Energy Field'."
+Druid,"wall","rune","spell"      -> "In this category ... 'Fire Wall', 'Poison Wall' and 'Energy Wall'."
+Druid,"bomb","rune","spell"      -> "In this category ... 'Firebomb'."
+
+Druid,"healing","spell"          -> "In this category ... 'Light Healing', 'Intense Healing', 'Ultimate Healing' and 'Antidote'."
+Druid,"supply","spell"           -> "In this category ... 'Food'."
+Druid,"support","spell"          -> "In this category ... 'Find Person', 'Light', 'Great Light', 'Magic Shield', 'Creature Illusion' and 'Invisible'."
+Druid,"summon","spell"           -> "In this category ... 'Summon Creature'."
+
+Druid,"find","person"             -> String="Find Person", Price=80,   "... You want 'Find Person' for %P gold?", Topic=3
+Druid,"light"                     -> String="Light", Price=100,  "... You want 'Light' for %P gold?", Topic=3
+Druid,"food"                      -> String="Food", Price=150,  "... You want 'Food' for %P gold?", Topic=3
+Druid,"light","healing"           -> String="Light Healing",  Price=170,  "... You want 'Light Healing' for %P gold?", Topic=3
+Druid,"light","missile"           -> String="Light Magic Missile",  Price=200,  "... You want 'Light Magic Missile' for %P gold?", Topic=3
+Druid,"antidote"                  -> String="Antidote", Price=150,  "... You want 'Antidote' for %P gold?", Topic=3
+Druid,"intense","healing"         -> String="Intense Healing",  Price=350,  "... You want 'Intense Healing' for %P gold?", Topic=3
+Druid,"poison","field"            -> String="Poison Field", Price=300,  "... You want 'Poison Field' for %P gold?", Topic=3
+Druid,"great","light"             -> String="Great Light", Price=500,  "... You want 'Great Light' for %P gold?", Topic=3
+Druid,"fire","field"              -> String="Fire Field", Price=500,  "... You want 'Fire Field' for %P gold?", Topic=3
+Druid,"heavy","missile"           -> String="Heavy Magic Missile",  Price=600,  "... You want 'Heavy Magic Missile' for %P gold?", Topic=3
+Druid,"magic","shield"            -> String="Magic Shield", Price=450,  "... You want 'Magic Shield' for %P gold?", Topic=3
+Druid,"intense","healing","rune"  -> String="Intense Healing Rune",  Price=600,  "... You want 'Intense Healing Rune' for %P gold?", Topic=3
+Druid,"antidote","rune"           -> String="Antidote Rune", Price=600,  "... You want 'Antidote Rune' for %P gold?", Topic=3
+Druid,"fireball"                  -> String="Fireball", Price=800,  "... You want 'Fireball' for %P gold?", Topic=3
+Druid,"energy","field"            -> String="Energy Field", Price=700,  "... You want 'Energy Field' for %P gold?", Topic=3
+Druid,"destroy","field"           -> String="Destroy Field", Price=350,  "... You want 'Destroy Field' for %P gold?", Topic=3
+Druid,"ultimate","healing"        -> String="Ultimate Healing",  Price=1000, "... You want 'Ultimate Healing' for %P gold?", Topic=3
+Druid,"great","fireball"          -> String="Great Fireball", Price=1200, "... You want 'Great Fireball' for %P gold?", Topic=3
+Druid,"fire","bomb"               -> String="Firebomb", Price=1500, "... You want 'Fire Bomb' for %P gold?", Topic=3
+Druid,"creature","illusion"       -> String="Creature Illusion", Price=1000, "... You want 'Creature Illusion' for %P gold?", Topic=3
+Druid,"convince","creature"       -> String="Convince Creature", Price=1300, "... You want 'Convince Creature' for %P gold?", Topic=3
+Druid,"ultimate","healing","rune" -> String="Ultimate Healing Rune",  Price=1500, "... You want 'Ultimate Healing Rune' for %P gold?", Topic=3
+Druid,"chameleon"                 -> String="Chameleon", Price=1300, "... You want 'Chameleon' for %P gold?", Topic=3
+Druid,"poison","wall"             -> String="Poison Wall", Price=1600, "... You want 'Poison Wall' for %P gold?", Topic=3
+Druid,"explosion"                 -> String="Explosion", Price=1800, "... You want 'Explosion' for %P gold?", Topic=3
+Druid,"fire","wall"               -> String="Fire Wall", Price=2000, "... You want 'Fire Wall' for %P gold?", Topic=3
+Druid,"Invisible"                 -> String="Invisibility", Price=1000, "... You want 'Invisible' for %P gold?", Topic=3
+Druid,"summon","creature"         -> String="Summon Creature",  Price=2000, "... You want 'Summon Creature' for %P gold?", Topic=3
+Druid,"energy","wall"             -> String="Energy Wall", Price=2500, "... You want 'Energy Wall' for %P gold?", Topic=3
+
+Topic=2,"0$"	-> "... For magic level 0 ... 'Food', 'Find Person' and 'Light'.", Topic=2
+Topic=2,"1$"	-> "... For magic level 1 ... 'Light Healing' and 'Light Magic Missile'.", Topic=2
+Topic=2,"2$"	-> "... For magic level 2 ... 'Antidote', 'Poison Field' and 'Intense Healing'.", Topic=2
+Topic=2,"3$"	-> "... For magic level 3 ... 'Great Light', 'Heavy Magic Missile' and 'Fire Field'.", Topic=2
+Topic=2,"4$"	-> "... For magic level 4 ... 'Magic Shield' and 'Intense Healing Rune'.", Topic=2
+Topic=2,"5$"	-> "... For magic level 5 ... 'Antidote Rune', 'Energy Field' and 'Fireball'.", Topic=2
+Topic=2,"6$"	-> "... For magic level 6 ... 'Destroy Field'.", Topic=2
+Topic=2,"8$"	-> "... For magic level 8 ... 'Ultimate Healing'.", Topic=2
+Topic=2,"9$"	-> "... For magic level 9 ... 'Great Fireball' and 'Firebomb'.", Topic=2
+Topic=2,"10$"	-> "... For magic level 10 ... 'Convince Creature' and 'Creature Illusion'.", Topic=2
+Topic=2,"11$"	-> "... For magic level 11 ... 'Ultimate Healing Rune', 'Poison Wall' and 'Chameleon'.", Topic=2
+Topic=2,"12$"	-> "... For magic level 12 ... 'Explosion'.", Topic=2
+Topic=2,"13$"	-> "... For magic level 13 ... 'Fire Wall'.", Topic=2
+Topic=2,"15$"	-> "... For magic level 15 ... 'Invisible'.", Topic=2
+Topic=2,"18$"	-> "... For magic level 18 ... 'Energy Wall'.", Topic=2
+
+Topic=2       -> "... Only spells for magic level 0 to 6 ... 8 to 13 ... 15 and 18 ...", Topic=2
+
+
+Topic=3,"yes",SpellKnown(String)=1        -> "... You already know..."
+Topic=3,"yes",MagicLevel<SpellMagicLevel(String) -> Amount=SpellMagicLevel(String), "... not magic level %A..."
+Topic=3,"yes",CountMoney<Price            -> "... More money."
+Topic=3,"yes"                             -> "... Here...", DeleteMoney, EffectOpp(13), TeachSpell(String)
+Topic=3                                   -> "... Then not."                                  
+
+}

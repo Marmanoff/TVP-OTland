@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Djema" behavior="djema.npc" walkradius="2" walkinterval="2000" speed="10" floorchange="0">
+  <look type="136" head="77" body="9" legs="86" feet="131" />
+</npc>

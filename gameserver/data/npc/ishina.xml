@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Ishina" behavior="ishina.npc" walkradius="0" walkinterval="2000" speed="10" floorchange="0">
+  <look type="138" head="95" body="9" legs="87" feet="95" />
+</npc>

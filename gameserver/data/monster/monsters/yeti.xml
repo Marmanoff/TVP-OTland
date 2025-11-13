@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Yeti" nameDescription="a yeti" race="blood" experience="460" speed="85" manacost="0">
+	<health now="950" max="950" />
+	<look type="110" head="0" body="0" legs="0" feet="0" corpse="3055" />
+	<targetchange chance="5" />
+	<targetstrategy nearest="70" weakest="0" mostdamage="30" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="0" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="2000" skillnextlevel="100" skilladdcount="1" skill="79" attack="53" />
+		<attack name="energy" delay="9" min="-120" max="-210" length="3" spread="3">
+			<attribute key="areaeffect" value="poff" />
+		</attack>
+		<attack name="physical" delay="7" min="-170" max="-200" range="7">
+			<attribute key="shooteffect" value="snowball" />
+			<attribute key="areaeffect" value="poff" />
+		</attack>
+	</attacks>
+	<defenses armor="28" defense="43">
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="1" />
+		<immunity poison="0" />
+		<immunity physical="0" />
+		<immunity outfit="1" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="0" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices>
+		<voice sentence="Yooodelaaahooohooo!" />
+		<voice sentence="Yooodelaaaheeeheee!" />
+	</voices>
+	<loot>
+		<item id="2129" countmax="1" chance="500" /><!-- wolf tooth chain -->
+		<item id="2111" countmax="22" chance="50000" /><!-- snowball -->
+		<item id="2666" countmax="4" chance="75000" /><!-- meat -->
+		<item id="2671" countmax="6" chance="35000" /><!-- ham -->
+		<item id="2148" countmax="20" chance="30000" /><!-- gold coin -->
+		<item id="2148" countmax="10" chance="60000" /><!-- gold coin -->
+		<item id="2644" countmax="1" chance="100" /><!-- bunnyslippers -->
+	</loot>
+</monster>

@@ -1,0 +1,10 @@
+"pottery"          -> "I offer vases, coal basins, amphora and large amphora. What do you need?"
+"vase"             -> Type=2008, Amount=1, Price=3,  "Do you want to buy a vase for %P gold?", Topic=81
+"large", "amphora" -> Type=2034, Amount=1, Price=50,  "Do you want to buy a large amphora for %P gold?", Topic=81
+"amphora"          -> Type=2023, Amount=1, Price=4,  "Do you want to buy an amphora for %P gold?", Topic=81
+"coal","basin"     -> Type=2604, Amount=1, Price=25, "Do you want to buy a coal basin for %P gold?", Topic=81
+
+Topic=81,"yes",Premium,CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)
+Topic=81,"yes",CountMoney>=Price         -> "I'm sorry, but you need a premium account if you want to buy furniture."
+Topic=81,"yes"                           -> "Come back, when you have enough money."
+Topic=81                                 -> "Hmm, but I'm sure, it would fit nicely into your house."

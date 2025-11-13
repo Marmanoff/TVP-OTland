@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Graubart" behavior="graubart.npc" walkradius="2" walkinterval="2000" speed="5" floorchange="0">
+  <look type="128" head="98" body="87" legs="12" feet="114" />
+</npc>

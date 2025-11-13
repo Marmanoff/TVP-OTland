@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Lea" behavior="lea.npc" walkradius="3" walkinterval="2000" speed="10" floorchange="0">
+  <look type="138" head="59" body="95" legs="94" feet="113" />
+</npc>

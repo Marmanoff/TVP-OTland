@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Busty Bonecrusher" behavior="busty bonecrusher.npc" walkradius="3" walkinterval="2000" speed="6" floorchange="0">
+  <look type="139" head="96" body="19" legs="66" feet="95" />
+</npc>

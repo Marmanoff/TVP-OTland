@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Hoggle" behavior="hoggle.npc" walkradius="3" walkinterval="2000" speed="10" floorchange="0">
+  <look type="128" head="20" body="46" legs="88" feet="94" />
+</npc>

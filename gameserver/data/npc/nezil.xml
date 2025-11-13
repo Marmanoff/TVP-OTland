@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Nezil" behavior="nezil.npc" walkradius="8" walkinterval="2000" speed="3" floorchange="0">
+  <look type="160" head="115" body="78" legs="116" feet="57" />
+</npc>

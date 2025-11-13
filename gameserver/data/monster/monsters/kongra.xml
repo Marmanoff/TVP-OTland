@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Kongra" nameDescription="a kongra" race="blood" experience="110" speed="52" manacost="0">
+	<health now="340" max="340" />
+	<look type="116" head="0" body="0" legs="0" feet="0" corpse="4268" />
+	<targetchange chance="0" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="10" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1200" skillnextlevel="100" skilladdcount="1" skill="40" attack="30" />
+	</attacks>
+	<defenses armor="18" defense="14">
+		<defense name="speed" delay="15" duration="3000" speed="50" speedvariation="5">
+			<attribute key="areaeffect" value="redshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="0" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="0" />
+		<immunity invisible="0" />
+	</immunities>
+	<voices>
+		<voice sentence="Hugah!" />
+		<voice sentence="Ungh! Ungh!" />
+		<voice sentence="Huaauaauaauaa!" />
+	</voices>
+	<loot>
+		<item id="2200" countmax="1" chance="1000" /><!-- protection amulet -->
+		<item id="2166" countmax="1" chance="500" /><!-- power ring -->
+		<item id="2463" countmax="1" chance="1000" /><!-- plate armor -->
+		<item id="2148" countmax="30" chance="10000" /><!-- gold coin -->
+		<item id="2148" countmax="25" chance="80000" /><!-- gold coin -->
+		<item id="2209" countmax="1" chance="200" /><!-- club ring -->
+		<item id="2676" countmax="10" chance="5000" /><!-- banana -->
+		<item id="2676" countmax="2" chance="30000" /><!-- banana -->
+	</loot>
+</monster>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Necromancer" nameDescription="a necromancer" race="blood" experience="580" speed="54" manacost="0">
+	<health now="580" max="580" />
+	<look type="9" head="0" body="0" legs="0" feet="0" corpse="3058" />
+	<targetchange chance="50" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="0" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="4" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1100" skillnextlevel="100" skilladdcount="2" skill="30" attack="40" poisoncycles="90" />
+		<attack name="poison" delay="6" min="-35" max="-95" range="7">
+			<attribute key="shooteffect" value="poison" />
+			<attribute key="areaeffect" value="poison" />
+		</attack>
+		<attack name="lifedrain" delay="5" min="-60" max="-100" range="1">
+			<attribute key="areaeffect" value="redspark" />
+		</attack>
+	</attacks>
+	<defenses armor="50" defense="40">
+		<defense name="healing" delay="4" min="42" max="68">
+			<attribute key="areaeffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="1" />
+		<immunity physical="0" />
+		<immunity outfit="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="0" />
+		<immunity invisible="1" />
+	</immunities>
+	<summons maxSummons="2">
+		<summon name="Mummy" max="1" delay="8" />
+		<summon name="Ghost" max="1" delay="7" />
+		<summon name="Ghoul" max="2" delay="6" />
+	</summons>
+	<voices>
+		<voice sentence="Your corpse will be mine!" />
+		<voice sentence="Taste the sweetness of death!" />
+	</voices>
+	<loot>
+		<item id="2186" countmax="1" chance="1"/><!-- conjurer wand -->
+		<item id="2436" countmax="1" chance="100"/><!-- skull staff -->
+		<item id="2406" countmax="1" chance="15000"/><!-- short sword -->
+		<item id="2483" countmax="1" chance="10000"/><!-- scale armor -->
+		<item id="2663" countmax="1" chance="500"/><!-- mystic turban -->
+		<item id="2796" countmax="1" chance="1500"/><!-- green mushroom -->
+		<item id="2148" countmax="90" chance="30000"/><!-- gold coin -->
+		<item id="2423" countmax="1" chance="1000"/><!-- clerical mace -->
+		<item id="2195" countmax="1" chance="200"/><!-- boots of haste -->
+	</loot>
+</monster>

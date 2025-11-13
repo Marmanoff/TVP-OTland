@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Seymour" behavior="seymour.npc" walkradius="1" walkinterval="2000" speed="5" floorchange="0">
+  <look type="128" head="115" body="69" legs="87" feet="116" />
+</npc>

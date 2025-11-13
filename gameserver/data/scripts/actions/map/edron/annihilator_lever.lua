@@ -1,0 +1,36 @@
+local action = Action()
+
+function action.onUse(player, item, fromPosition, target, toPosition)
+	if item:getId() == 1946 and Game.isItemInPosition({x = 33222, y = 31671, z = 13},425) and Game.isItemInPosition ({x = 33223, y = 31671, z = 13},425) and Game.isItemInPosition ({x = 33224, y = 31671, z = 13},425) and Game.isItemInPosition ({x = 33225, y = 31671, z = 13},425) and Game.isItemInPosition ({x = 33220, y = 31659, z = 13},1285) then 
+		item:transform(1945, 1)
+		item:decay()
+		Game.removeItemInPosition({x = 33220, y = 31659, z = 13}, 1285)
+		Game.removeItemInPosition({x = 33221, y = 31659, z = 13}, 1285)
+		Game.removeItemInPosition({x = 33222, y = 31659, z = 13}, 1285)
+		Game.removeItemInPosition({x = 33223, y = 31659, z = 13}, 1285)
+		Game.removeItemInPosition({x = 33224, y = 31659, z = 13}, 1285)
+		Game.removeItemInPosition({x = 33219, y = 31659, z = 13}, 1285)
+		Game.removeItemInPosition({x = 33219, y = 31657, z = 13}, 1285)
+		Game.removeItemInPosition({x = 33221, y = 31657, z = 13}, 1285)
+		Game.removeItemInPosition({x = 33220, y = 31661, z = 13}, 1285)
+		Game.removeItemInPosition({x = 33222, y = 31661, z = 13}, 1285)
+		Game.createMonster("Demon", {x = 33224, y = 31659, z = 13}, true)
+		Game.createMonster("Demon", {x = 33223, y = 31659, z = 13}, true)
+		Game.createMonster("Demon", {x = 33219, y = 31657, z = 13}, true)
+		Game.createMonster("Demon", {x = 33221, y = 31657, z = 13}, true)
+		Game.createMonster("Demon", {x = 33220, y = 31661, z = 13}, true)
+		Game.createMonster("Demon", {x = 33222, y = 31661, z = 13}, true)
+		doRelocate({x = 33222, y = 31671, z = 13},{x = 33219, y = 31659, z = 13})
+		doRelocate({x = 33223, y = 31671, z = 13},{x = 33220, y = 31659, z = 13})
+		doRelocate({x = 33224, y = 31671, z = 13},{x = 33221, y = 31659, z = 13})
+		doRelocate({x = 33225, y = 31671, z = 13},{x = 33222, y = 31659, z = 13})
+		Game.sendMagicEffect({x = 33219, y = 31659, z = 13}, 11)
+		Game.sendMagicEffect({x = 33220, y = 31659, z = 13}, 11)
+		Game.sendMagicEffect({x = 33221, y = 31659, z = 13}, 11)
+		Game.sendMagicEffect({x = 33222, y = 31659, z = 13}, 11)
+	end
+	return true
+end
+
+action:aid(2015)
+action:register()

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Aruda" behavior="aruda.npc" walkradius="99" walkinterval="2000" speed="20" floorchange="0">
+	<look type="136" head="75" body="40" legs="48" feet="95"/>
+</npc>

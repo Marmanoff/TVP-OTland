@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="The Queen of the Banshee" behavior="the queen of the banshee.npc" walkradius="6" walkinterval="2000" speed="25" floorchange="0">
+  <look type="78" head="0" body="0" legs="0" feet="0" />
+</npc>

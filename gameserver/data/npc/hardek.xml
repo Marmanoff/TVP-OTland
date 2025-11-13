@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Hardek" behavior="hardek.npc" walkradius="20" walkinterval="2000" speed="10" floorchange="0">
+  <look type="129" head="96" body="86" legs="63" feet="115" />
+</npc>

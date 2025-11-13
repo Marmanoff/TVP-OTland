@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="An Old Dragonlord" behavior="an old dragonlord.npc" walkradius="3" walkinterval="2000" speed="1" floorchange="0">
+  <look type="39" head="0" body="0" legs="0" feet="0" />
+</npc>

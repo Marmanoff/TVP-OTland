@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="King Tibianus" behavior="king tibianus.npc" walkradius="1" walkinterval="2000" speed="10" floorchange="0">
+  <look type="130" head="21" body="87" legs="107" feet="95" />
+</npc>

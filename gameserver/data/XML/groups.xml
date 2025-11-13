@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<groups>
+	<group id="1" name="player" access="0" maxdepotitems="0" maxvipentries="0" />
+	<group id="2" name="tutor" access="0" maxdepotitems="0" maxvipentries="0">
+		<flags>
+			<flag talkorangehelpchannel="1" />
+			<flag cannotbemuted="1" />
+		</flags>
+	</group>
+	<group id="3" name="senior tutor" access="0" maxdepotitems="0" maxvipentries="0">
+		<flags>
+			<flag talkorangehelpchannel="1" />
+			<flag cantalkredprivate="1" />
+			<flag cantalkredchannel="1" />
+			<flag cannotbemuted="1" />
+		</flags>
+		<ruleviolations>
+			<ruleviolation name="STATEMENT_REPORT" />
+
+			<ruleviolation name="STATEMENT_INSULTING" />
+			<ruleviolation name="STATEMENT_SPAMMING" />
+			<ruleviolation name="STATEMENT_ADVERT_OFFTOPIC" />
+			<ruleviolation name="STATEMENT_ADVERT_MONEY" />
+			<ruleviolation name="STATEMENT_NON_ENGLISH" />
+			<ruleviolation name="STATEMENT_CHANNEL_OFFTOPIC" />
+			<ruleviolation name="STATEMENT_VIOLATION_INCITING" />
+		</ruleviolations>
+	</group>
+	<group id="4" name="gamemaster" access="1" maxdepotitems="0" maxvipentries="200">
+		<flags>
+			<flag cannotusecombat="0" />
+			<flag cannotattackplayer="0" />
+			<flag cannotattackmonster="0" />
+			<flag cannotbeattacked="1" />
+			<flag canconvinceall="0" />
+			<flag cansummonall="0" />
+			<flag canillusionall="1" />
+			<flag cansenseinvisibility="1" />
+			<flag ignoredbymonsters="1" />
+			<flag notgaininfight="1" />
+			<flag hasinfinitemana="0" />
+			<flag hasinfinitesoul="0" />
+			<flag hasnoexhaustion="1" />
+			<flag cannotusespells="1" />
+			<flag cannotpickupitem="1" />
+			<flag canalwayslogin="1" />
+			<flag canbroadcast="1" />
+			<flag canedithouses="0" />
+			<flag cannotbebanned="1" />
+			<flag cannotbepushed="0" />
+			<flag hasinfinitecapacity="1" />
+			<flag canpushallcreatures="1" />
+			<flag cantalkredprivate="1" />
+			<flag cantalkredchannel="1" />
+			<flag talkorangehelpchannel="1" />
+			<flag notgainexperience="1" />
+			<flag notgainmana="1" />
+			<flag notgainhealth="1" />
+			<flag notgainskill="1" />
+			<flag setmaxspeed="0" />
+			<flag specialvip="1" />
+			<flag notgenerateloot="1" />
+			<flag ignoreprotectionzone="1" />
+			<flag ignorespellcheck="1" />
+			<flag ignoreweaponcheck="1" />
+			<flag cannotbemuted="1" />
+			<flag isalwayspremium="1" />
+			<flag fulllight="1" />
+		</flags>
+		<ruleviolations>
+			<!-- Actions come first -->
+			<ruleviolation name="NOTATION" />
+			<ruleviolation name="NAMELOCK" />
+			<ruleviolation name="STATEMENT_REPORT" />
+
+			<!-- Options come last -->
+			<ruleviolation name="NAME_INSULTING" />
+			<ruleviolation name="NAME_SENTENCE" />
+			<ruleviolation name="NAME_NONSENSICAL_LETTERS" />
+			<ruleviolation name="NAME_BADLY_FORMATTED" />
+			<ruleviolation name="NAME_NO_PERSON" />
+			<ruleviolation name="NAME_CELEBRITY" />
+			<ruleviolation name="NAME_COUNTRY" />
+			<ruleviolation name="NAME_FAKE_IDENTITY" />
+			<ruleviolation name="NAME_FAKE_POSITION" />
+			<ruleviolation name="STATEMENT_INSULTING" />
+			<ruleviolation name="STATEMENT_SPAMMING" />
+			<ruleviolation name="STATEMENT_ADVERT_OFFTOPIC" />
+			<ruleviolation name="STATEMENT_ADVERT_MONEY" />
+			<ruleviolation name="STATEMENT_NON_ENGLISH" />
+			<ruleviolation name="STATEMENT_CHANNEL_OFFTOPIC" />
+			<ruleviolation name="STATEMENT_VIOLATION_INCITING" />
+			<ruleviolation name="CHEATING_BUG_ABUSE" />
+			<ruleviolation name="CHEATING_GAME_WEAKNESS" />
+			<ruleviolation name="CHEATING_MACRO_USE" />
+			<ruleviolation name="CHEATING_MODIFIED_CLIENT" />
+			<ruleviolation name="CHEATING_HACKING" />
+			<ruleviolation name="CHEATING_MULTI_CLIENT" />
+			<ruleviolation name="CHEATING_ACCOUNT_TRADING" />
+			<ruleviolation name="CHEATING_ACCOUNT_SHARING" />
+			<ruleviolation name="GAMEMASTER_THREATENING" />
+			<ruleviolation name="GAMEMASTER_PRETENDING" />
+			<ruleviolation name="GAMEMASTER_INFLUENCE" />
+			<ruleviolation name="GAMEMASTER_FALSE_REPORTS" />
+			<ruleviolation name="KILLING_EXCESSIVE_UNJUSTIFIED" />
+			<ruleviolation name="DESTRUCTIVE_BEHAVIOUR" />
+			<ruleviolation name="SPOILING_AUCTION" />
+			<ruleviolation name="INVALID_PAYMENT" />
+		</ruleviolations>
+	</group>
+	<group id="5" name="community manager" access="1" maxdepotitems="0" maxvipentries="200">
+		<flags>
+			<flag cannotusecombat="0" />
+			<flag cannotattackplayer="0" />
+			<flag cannotattackmonster="0" />
+			<flag cannotbeattacked="1" />
+			<flag canconvinceall="1" />
+			<flag cansummonall="1" />
+			<flag canillusionall="1" />
+			<flag cansenseinvisibility="1" />
+			<flag ignoredbymonsters="1" />
+			<flag notgaininfight="1" />
+			<flag hasinfinitemana="1" />
+			<flag hasinfinitesoul="1" />
+			<flag hasnoexhaustion="1" />
+			<flag cannotusespells="0" />
+			<flag cannotpickupitem="0" />
+			<flag canalwayslogin="1" />
+			<flag canbroadcast="1" />
+			<flag canedithouses="0" />
+			<flag cannotbebanned="1" />
+			<flag cannotbepushed="0" />
+			<flag hasinfinitecapacity="1" />
+			<flag canpushallcreatures="1" />
+			<flag cantalkredprivate="1" />
+			<flag cantalkredchannel="1" />
+			<flag talkorangehelpchannel="1" />
+			<flag notgainexperience="1" />
+			<flag notgainmana="1" />
+			<flag notgainhealth="1" />
+			<flag notgainskill="1" />
+			<flag setmaxspeed="0" />
+			<flag specialvip="1" />
+			<flag notgenerateloot="1" />
+			<flag ignoreprotectionzone="1" />
+			<flag ignorespellcheck="1" />
+			<flag ignoreweaponcheck="1" />
+			<flag cannotbemuted="1" />
+			<flag isalwayspremium="1" />
+			<flag fulllight="1" />
+		</flags>
+		<ruleviolations>
+			<!-- Actions come first -->
+			<ruleviolation name="NOTATION" />
+			<ruleviolation name="NAMELOCK" />
+			<ruleviolation name="STATEMENT_REPORT" />
+			<ruleviolation name="BANISHMENT" />
+
+			<!-- Options come last -->
+			<ruleviolation name="NAME_INSULTING" />
+			<ruleviolation name="NAME_SENTENCE" />
+			<ruleviolation name="NAME_NONSENSICAL_LETTERS" />
+			<ruleviolation name="NAME_BADLY_FORMATTED" />
+			<ruleviolation name="NAME_NO_PERSON" />
+			<ruleviolation name="NAME_CELEBRITY" />
+			<ruleviolation name="NAME_COUNTRY" />
+			<ruleviolation name="NAME_FAKE_IDENTITY" />
+			<ruleviolation name="NAME_FAKE_POSITION" />
+			<ruleviolation name="STATEMENT_INSULTING" />
+			<ruleviolation name="STATEMENT_SPAMMING" />
+			<ruleviolation name="STATEMENT_ADVERT_OFFTOPIC" />
+			<ruleviolation name="STATEMENT_ADVERT_MONEY" />
+			<ruleviolation name="STATEMENT_NON_ENGLISH" />
+			<ruleviolation name="STATEMENT_CHANNEL_OFFTOPIC" />
+			<ruleviolation name="STATEMENT_VIOLATION_INCITING" />
+			<ruleviolation name="CHEATING_BUG_ABUSE" />
+			<ruleviolation name="CHEATING_GAME_WEAKNESS" />
+			<ruleviolation name="CHEATING_MACRO_USE" />
+			<ruleviolation name="CHEATING_MODIFIED_CLIENT" />
+			<ruleviolation name="CHEATING_HACKING" />
+			<ruleviolation name="CHEATING_MULTI_CLIENT" />
+			<ruleviolation name="CHEATING_ACCOUNT_TRADING" />
+			<ruleviolation name="CHEATING_ACCOUNT_SHARING" />
+			<ruleviolation name="GAMEMASTER_THREATENING" />
+			<ruleviolation name="GAMEMASTER_PRETENDING" />
+			<ruleviolation name="GAMEMASTER_INFLUENCE" />
+			<ruleviolation name="GAMEMASTER_FALSE_REPORTS" />
+			<ruleviolation name="KILLING_EXCESSIVE_UNJUSTIFIED" />
+			<ruleviolation name="DESTRUCTIVE_BEHAVIOUR" />
+			<ruleviolation name="SPOILING_AUCTION" />
+			<ruleviolation name="INVALID_PAYMENT" />
+		</ruleviolations>
+	</group>
+	<group id="6" name="god" access="1" maxdepotitems="0" maxvipentries="200">
+		<flags>
+			<flag cannotusecombat="0" />
+			<flag cannotattackplayer="0" />
+			<flag cannotattackmonster="0" />
+			<flag cannotbeattacked="1" />
+			<flag canconvinceall="1" />
+			<flag cansummonall="1" />
+			<flag canillusionall="1" />
+			<flag cansenseinvisibility="1" />
+			<flag ignoredbymonsters="1" />
+			<flag notgaininfight="1" />
+			<flag hasinfinitemana="1" />
+			<flag hasinfinitesoul="1" />
+			<flag hasnoexhaustion="1" />
+			<flag cannotusespells="0" />
+			<flag cannotpickupitem="0" />
+			<flag canalwayslogin="1" />
+			<flag canbroadcast="1" />
+			<flag canedithouses="1" />
+			<flag cannotbebanned="1" />
+			<flag cannotbepushed="0" />
+			<flag hasinfinitecapacity="1" />
+			<flag canpushallcreatures="1" />
+			<flag cantalkredprivate="1" />
+			<flag cantalkredchannel="1" />
+			<flag talkorangehelpchannel="1" />
+			<flag notgainexperience="1" />
+			<flag notgainmana="1" />
+			<flag notgainhealth="1" />
+			<flag notgainskill="1" />
+			<flag setmaxspeed="0" />
+			<flag specialvip="1" />
+			<flag notgenerateloot="0" />
+			<flag ignoreprotectionzone="1" />
+			<flag ignorespellcheck="1" />
+			<flag ignoreweaponcheck="1" />
+			<flag cannotbemuted="1" />
+			<flag isalwayspremium="1" />
+			<flag fulllight="1" />
+		</flags>
+		<ruleviolations>
+			<!-- Actions come first -->
+			<ruleviolation name="NOTATION" />
+			<ruleviolation name="NAMELOCK" />
+			<ruleviolation name="STATEMENT_REPORT" />
+			<ruleviolation name="BANISHMENT" />
+			<ruleviolation name="FINAL_WARNING" />
+			<ruleviolation name="IP_BANISHMENT" />
+
+			<!-- Options come last -->
+			<ruleviolation name="NAME_INSULTING" />
+			<ruleviolation name="NAME_SENTENCE" />
+			<ruleviolation name="NAME_NONSENSICAL_LETTERS" />
+			<ruleviolation name="NAME_BADLY_FORMATTED" />
+			<ruleviolation name="NAME_NO_PERSON" />
+			<ruleviolation name="NAME_CELEBRITY" />
+			<ruleviolation name="NAME_COUNTRY" />
+			<ruleviolation name="NAME_FAKE_IDENTITY" />
+			<ruleviolation name="NAME_FAKE_POSITION" />
+			<ruleviolation name="STATEMENT_INSULTING" />
+			<ruleviolation name="STATEMENT_SPAMMING" />
+			<ruleviolation name="STATEMENT_ADVERT_OFFTOPIC" />
+			<ruleviolation name="STATEMENT_ADVERT_MONEY" />
+			<ruleviolation name="STATEMENT_NON_ENGLISH" />
+			<ruleviolation name="STATEMENT_CHANNEL_OFFTOPIC" />
+			<ruleviolation name="STATEMENT_VIOLATION_INCITING" />
+			<ruleviolation name="CHEATING_BUG_ABUSE" />
+			<ruleviolation name="CHEATING_GAME_WEAKNESS" />
+			<ruleviolation name="CHEATING_MACRO_USE" />
+			<ruleviolation name="CHEATING_MODIFIED_CLIENT" />
+			<ruleviolation name="CHEATING_HACKING" />
+			<ruleviolation name="CHEATING_MULTI_CLIENT" />
+			<ruleviolation name="CHEATING_ACCOUNT_TRADING" />
+			<ruleviolation name="CHEATING_ACCOUNT_SHARING" />
+			<ruleviolation name="GAMEMASTER_THREATENING" />
+			<ruleviolation name="GAMEMASTER_PRETENDING" />
+			<ruleviolation name="GAMEMASTER_INFLUENCE" />
+			<ruleviolation name="GAMEMASTER_FALSE_REPORTS" />
+		</ruleviolations>
+	</group>
+</groups>

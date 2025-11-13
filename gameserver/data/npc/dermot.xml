@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Dermot" behavior="dermot.npc" walkradius="2" walkinterval="2000" speed="10" floorchange="0">
+  <look type="129" head="76" body="49" legs="19" feet="95" />
+</npc>

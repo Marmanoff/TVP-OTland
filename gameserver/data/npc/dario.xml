@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Dario" behavior="dario.npc" walkradius="1" walkinterval="2000" speed="10" floorchange="0">
+  <look type="144" head="3" body="58" legs="41" feet="115" />
+</npc>

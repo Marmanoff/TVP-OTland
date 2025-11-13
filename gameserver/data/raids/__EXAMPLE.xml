@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raid>
+	<!-- Raid is unannounced! -->
+	<!-- <announce delay="0" type="event" message="Grorlam is looking for food."/> -->
+
+	<!-- This raid will respawn sometime after server save if it is not killed. -->
+	<areaspawn isboss="true" delay="0" radius="1" centerx="32381" centery="32063" centerz="12">
+		<monster name="Grorlam" minamount="1" maxamount="1" lifetime="14400000" />
+	</areaspawn>
+</raid>

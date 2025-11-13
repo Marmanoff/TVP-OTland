@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Dharalion" race="blood" experience="380" speed="72" manacost="0">
+	<health now="390" max="390" />
+	<look type="203" head="0" body="0" legs="0" feet="0" corpse="2979" />
+	<targetchange chance="7" />
+	<targetstrategy nearest="10" weakest="10" mostdamage="20" random="60" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="0" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="4" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1500" skillnextlevel="100" skilladdcount="1" skill="30" attack="28" />
+		<attack name="physical" delay="10" min="-130" max="-150" range="7">
+			<attribute key="shooteffect" value="death" />
+		</attack>
+		<attack name="energy" delay="8" min="-70" max="-90" range="7">
+			<attribute key="shooteffect" value="energy" />
+			<attribute key="areaeffect" value="energy" />
+		</attack>
+		<attack name="manadrain" delay="7" min="-30" max="-60" range="7" />
+	</attacks>
+	<defenses armor="15" defense="39">
+		<defense name="speed" delay="15" duration="10000" speed="85" speedvariation="5">
+			<attribute key="areaeffect" value="redshimmer" />
+		</defense>
+		<defense name="healing" delay="5" min="90" max="120">
+			<attribute key="areaeffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="1" />
+		<immunity physical="0" />
+		<immunity outfit="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="0" />
+		<immunity invisible="1" />
+	</immunities>
+	<summons maxSummons="2">
+		<summon name="Demon Skeleton" max="2" delay="18" />
+	</summons>
+	<voices>
+		<voice sentence="You desecrated this temple!" />
+		<voice sentence="Noone will stop my ascension!" />
+		<voice sentence="My powers are divine!" />
+		<voice sentence="Muahahaha!" />
+	</voices>
+	<loot>
+		<item id="2154" countmax="1" chance="400" /><!-- yellow gem -->
+		<item id="2401" countmax="1" chance="11000" /><!-- staff -->
+		<item id="2802" countmax="1" chance="7000" /><!-- sling herb -->
+		<item id="1949" countmax="1" chance="30000" /><!-- scroll -->
+		<item id="2642" countmax="1" chance="9000" /><!-- sandals -->
+		<item id="2682" countmax="1" chance="20000" /><!-- melon -->
+		<item id="2177" countmax="1" chance="1500" /><!-- life crystal -->
+		<item id="2600" countmax="1" chance="9000" /><!-- inkwell -->
+		<item id="2652" countmax="1" chance="9000" /><!-- green tunic -->
+		<item id="2747" countmax="1" chance="9000" /><!-- grave flower -->
+		<item id="2198" countmax="1" chance="2000" /><!-- elven amulet -->
+		<item id="2047" countmax="1" chance="9000" /><!-- candlestick -->
+		<item id="2689" countmax="1" chance="14000" /><!-- bread -->
+		<item id="2032" countmax="1" chance="6500" /><!-- bowl -->
+		<item id="2260" countmax="1" chance="18000" /><!-- blank rune -->
+	</loot>
+</monster>

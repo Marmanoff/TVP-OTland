@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Hydra" nameDescription="a hydra" race="blood" experience="2100" speed="60" manacost="0">
+	<health now="2250" max="2250" />
+	<look type="121" head="0" body="0" legs="0" feet="0" corpse="4283" />
+	<targetchange chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="300" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1100" skillnextlevel="100" skilladdcount="2" skill="71" attack="56" />
+		<attack name="poison" delay="9" min="-60" max="-300" length="8" spread="3">
+			<attribute key="areaeffect" value="poison" />
+		</attack>
+		<attack name="physical" delay="7" min="-100" max="-200" length="8" spread="3">
+			<attribute key="areaeffect" value="bluebubble" />
+		</attack>
+		<attack name="speed" delay="6" duration="15000" speed="-80" speedvariation="40" range="7" radius="4" target="1">
+			<attribute key="shooteffect" value="poison" />
+			<attribute key="areaeffect" value="greenbubble" />
+		</attack>
+	</attacks>
+	<defenses armor="27" defense="45">
+		<defense name="healing" delay="3" min="200" max="400">
+			<attribute key="areaeffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="1" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices>
+		<voice sentence="FCHHHHH" yell="1" />
+		<voice sentence="HISSSS" yell="1" />
+	</voices>
+	<loot>
+		<item id="2475" countmax="1" chance="1000" /><!-- warrior helmet -->
+		<item id="2197" countmax="1" chance="800" /><!-- stone skin amulet -->
+		<item id="2146" countmax="1" chance="5000" /><!-- small sapphire -->
+		<item id="2498" countmax="1" chance="200" /><!-- royal helmet -->
+		<item id="2214" countmax="1" chance="1200" /><!-- ring of healing -->
+		<item id="2536" countmax="1" chance="100" /><!-- medusa shield -->
+		<item id="2666" countmax="4" chance="90000" /><!-- meat -->
+		<item id="2177" countmax="1" chance="600" /><!-- life crystal -->
+		<item id="2476" countmax="1" chance="1000" /><!-- knight armor -->
+		<item id="4850" countmax="1" chance="900" /><!-- hydra egg -->
+		<item id="2671" countmax="3" chance="60000" /><!-- ham -->
+		<item id="2148" countmax="50" chance="40000" /><!-- gold coin -->
+		<item id="2148" countmax="100" chance="60000" /><!-- gold coin -->
+		<item id="2148" countmax="100" chance="80000" /><!-- gold coin -->
+		<item id="2195" countmax="1" chance="100" /><!-- boots of haste -->
+	</loot>
+</monster>

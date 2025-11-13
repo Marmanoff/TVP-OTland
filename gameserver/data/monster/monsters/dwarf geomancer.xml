@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Dwarf Geomancer" nameDescription="a dwarf geomancer" race="blood" experience="245" speed="60" manacost="0">
+	<health now="380" max="380" />
+	<look type="66" head="0" body="0" legs="0" feet="0" corpse="2987" />
+	<targetchange chance="50" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="4" />
+		<flag runonhealth="150" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1500" skillnextlevel="100" skilladdcount="1" skill="50" attack="30" />
+		<attack name="manadrain" delay="4" min="-50" max="-80" range="7" />
+		<attack name="physical" delay="3" min="-55" max="-105" range="7">
+			<attribute key="shooteffect" value="largerock" />
+		</attack>
+	</attacks>
+	<defenses armor="15" defense="35">
+		<defense name="healing" delay="2" min="75" max="125">
+			<attribute key="areaeffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity fire="1" />
+		<immunity energy="0" />
+		<immunity poison="1" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="0" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices>
+		<voice sentence="Hail Durin!" />
+		<voice sentence="Earth is the strongest element." />
+		<voice sentence="Dust to dust." />
+	</voices>
+	<loot>
+		<item id="2787" countmax="2" chance="60000" /><!-- white mushroom -->
+		<item id="2468" countmax="1" chance="20000" /><!-- studded legs -->
+		<item id="2175" countmax="1" chance="400" /><!-- spellbook -->
+		<item id="2481" countmax="1" chance="8000" /><!-- soldier helmet -->
+		<item id="2146" countmax="1" chance="100" /><!-- small sapphire -->
+		<item id="2673" countmax="2" chance="18000" /><!-- pear -->
+		<item id="2162" countmax="1" chance="12000" /><!-- magic light wand -->
+		<item id="2643" countmax="1" chance="40000" /><!-- leather boots -->
+		<item id="2148" countmax="30" chance="70000" /><!-- gold coin -->
+		<item id="2213" countmax="1" chance="300" /><!-- dwarven ring -->
+		<item id="2423" countmax="1" chance="1000" /><!-- clerical mace -->
+		<item id="2260" countmax="1" chance="10000" /><!-- blank rune -->
+		<item id="1987" countmax="1" chance="50000" /><!-- bag -->
+	</loot>
+</monster>

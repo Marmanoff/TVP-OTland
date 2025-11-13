@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Giant Spider" nameDescription="a giant spider" race="venom" experience="900" speed="80" manacost="0">
+	<health now="1300" max="1300" />
+	<look type="38" head="0" body="0" legs="0" feet="0" corpse="2857" />
+	<targetchange chance="10" />
+	<targetstrategy nearest="70" weakest="20" mostdamage="0" random="10" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="0" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1100" skillnextlevel="100" skilladdcount="2" skill="80" attack="65" poisoncycles="150" />
+		<attack name="poisonfield" delay="6" range="7" radius="1" target="1">
+			<attribute key="shooteffect" value="poison" />
+		</attack>
+	</attacks>
+	<defenses armor="30" defense="40">
+		<defense name="speed" delay="18" duration="20000" speed="65" speedvariation="5">
+			<attribute key="areaeffect" value="redshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity fire="1" />
+		<immunity energy="0" />
+		<immunity poison="1" />
+		<immunity physical="0" />
+		<immunity outfit="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="0" />
+		<immunity invisible="1" />
+	</immunities>
+	<summons maxSummons="2">
+		<summon name="Poison Spider" max="2" delay="10" />
+	</summons>
+	<loot>
+		<item id="2169" countmax="1" chance="700" /><!-- time ring -->
+		<item id="2457" countmax="1" chance="5000" /><!-- steel helmet -->
+		<item id="2171" countmax="1" chance="100" /><!-- platinum amulet -->
+		<item id="2463" countmax="1" chance="10000" /><!-- plate armor -->
+		<item id="2477" countmax="1" chance="300" /><!-- knight legs -->
+		<item id="2476" countmax="1" chance="300" /><!-- knight armor -->
+		<item id="2148" countmax="11" chance="99900" /><!-- gold coin -->
+		<item id="2148" countmax="33" chance="66600" /><!-- gold coin -->
+		<item id="2148" countmax="55" chance="33300" /><!-- gold coin -->
+		<item id="2478" countmax="1" chance="8000" /><!-- brass legs -->
+	</loot>
+</monster>

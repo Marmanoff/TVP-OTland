@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Frans" behavior="frans.npc" walkradius="1" walkinterval="2000" speed="10" floorchange="0">
+  <look typeex="2229" />
+</npc>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Wyat" behavior="wyat.npc" walkradius="2" walkinterval="2000" speed="6" floorchange="0">
+  <look type="129" head="98" body="96" legs="95" feet="116" />
+</npc>

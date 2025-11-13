@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Tezila" behavior="tezila.npc" walkradius="2" walkinterval="2000" speed="10" floorchange="0">
+  <look type="160" head="3" body="92" legs="110" feet="115" />
+</npc>

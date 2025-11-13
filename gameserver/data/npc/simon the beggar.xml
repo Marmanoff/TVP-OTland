@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Simon the Beggar" behavior="simon the beggar.npc" walkradius="4" walkinterval="2000" speed="10" floorchange="0">
+  <look type="128" head="116" body="123" legs="32" feet="40" />
+</npc>

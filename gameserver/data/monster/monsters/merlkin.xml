@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Merlkin" nameDescription="a merlkin" race="blood" experience="135" speed="57" manacost="0">
+	<health now="230" max="230" />
+	<look type="117" head="0" body="0" legs="0" feet="0" corpse="4271" />
+	<targetchange chance="50" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag convinceable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="4" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1500" skillnextlevel="100" skilladdcount="1" skill="25" attack="15" />
+		<attack name="poisonfield" delay="7" range="7" radius="1" target="1">
+			<attribute key="shooteffect" value="energy" />
+		</attack>
+		<attack name="energy" delay="3" min="-15" max="-45" range="7">
+			<attribute key="shooteffect" value="energy" />
+			<attribute key="areaeffect" value="energy" />
+		</attack>
+		<attack name="fire" delay="8" min="-30" max="-90" range="7">
+			<attribute key="shooteffect" value="fire" />
+			<attribute key="areaeffect" value="firearea" />
+		</attack>
+	</attacks>
+	<defenses armor="16" defense="40">
+		<defense name="healing" delay="11" min="10" max="40">
+			<attribute key="areaeffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="1" />
+		<immunity poison="0" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="0" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices>
+		<voice sentence="Ugh! Ugh! Ugh!" />
+		<voice sentence="Holy banana!" />
+		<voice sentence="Chakka! Chakka!" />
+	</voices>
+	<loot>
+		<item id="2150" countmax="1" chance="500"/><!-- small amethyst -->
+		<item id="2675" countmax="5" chance="1000"/><!-- orange -->
+		<item id="2162" countmax="1" chance="5000"/><!-- magic light wand -->
+		<item id="2148" countmax="25" chance="80000"/><!-- gold coin -->
+		<item id="3966" countmax="1" chance="100"/><!-- banana staff -->
+		<item id="2676" countmax="10" chance="5000"/><!-- banana -->
+		<item id="2676" countmax="2" chance="30000"/><!-- banana -->
+	</loot>
+</monster>

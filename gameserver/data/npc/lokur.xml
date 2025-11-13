@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Lokur" behavior="lokur.npc" walkradius="2" walkinterval="2000" speed="2" floorchange="0">
+  <look type="160" head="57" body="79" legs="98" feet="95" />
+</npc>

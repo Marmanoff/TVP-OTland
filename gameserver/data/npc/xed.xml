@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Xed" behavior="xed.npc" walkradius="1" walkinterval="2000" speed="10" floorchange="0">
+  <look type="129" head="78" body="36" legs="57" feet="97" />
+</npc>

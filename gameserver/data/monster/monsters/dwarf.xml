@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Dwarf" nameDescription="a dwarf" race="blood" experience="45" speed="45" manacost="320">
+	<health now="90" max="90" />
+	<look type="69" head="0" body="0" legs="0" feet="0" corpse="2960" />
+	<targetchange chance="0" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag illusionable="1" />
+		<flag pushable="1" />
+		<flag convinceable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1500" skillnextlevel="100" skilladdcount="1" skill="23" attack="14" />
+	</attacks>
+	<defenses armor="8" defense="14">
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="1" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="0" />
+		<immunity invisible="0" />
+	</immunities>
+	<voices>
+		<voice sentence="Hail Durin!" />
+	</voices>
+	<loot>
+		<item id="2787" countmax="1" chance="50000" /><!-- white mushroom -->
+		<item id="2484" countmax="1" chance="8000" /><!-- studded armor -->
+		<item id="2553" countmax="1" chance="10000" /><!-- pick -->
+		<item id="2597" countmax="1" chance="8000" /><!-- letter -->
+		<item id="2649" countmax="1" chance="10000" /><!-- leather legs -->
+		<item id="2388" countmax="1" chance="25000" /><!-- hatchet -->
+		<item id="2148" countmax="8" chance="45000" /><!-- gold coin -->
+		<item id="2213" countmax="1" chance="100" /><!-- dwarven ring -->
+		<item id="2530" countmax="1" chance="10000" /><!-- copper shield -->
+		<item id="2386" countmax="1" chance="15000" /><!-- axe -->
+	</loot>
+</monster>

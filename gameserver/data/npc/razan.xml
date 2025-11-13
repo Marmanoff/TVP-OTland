@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Razan" behavior="razan.npc" walkradius="2" walkinterval="2000" speed="10" floorchange="0">
+  <look type="129" head="95" body="19" legs="10" feet="58" />
+</npc>

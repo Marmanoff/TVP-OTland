@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Black Sheep" nameDescription="a black sheep" race="blood" experience="0" speed="18" manacost="250">
+	<health now="20" max="20" />
+	<look type="13" head="0" body="0" legs="0" feet="0" corpse="2914" />
+	<targetchange chance="0" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag illusionable="1" />
+		<flag pushable="1" />
+		<flag convinceable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="20" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1200" skillnextlevel="0" skilladdcount="0" skill="0" attack="0" />
+	</attacks>
+	<defenses armor="1" defense="2">
+	</defenses>
+	<immunities>
+		<immunity fire="0" />
+		<immunity energy="0" />
+		<immunity poison="0" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="0" />
+		<immunity invisible="0" />
+	</immunities>
+	<voices>
+		<voice sentence="Maeh" />
+	</voices>
+	<loot>
+		<item id="2666" countmax="4" chance="70000" /><!-- meat -->
+	</loot>
+</monster>

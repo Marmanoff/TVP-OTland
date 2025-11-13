@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Budrik" behavior="budrik.npc" walkradius="4" walkinterval="2000" speed="6" floorchange="0">
+  <look type="160" head="94" body="76" legs="58" feet="95" />
+</npc>

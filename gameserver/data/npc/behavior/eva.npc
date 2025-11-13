@@ -1,0 +1,17 @@
+Behavior = {
+ADDRESS,"hello$",! -> "Welcome %N! What can I do for you?"
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Sorry %N, I am already talking to a customer. Take a seat, please.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Good bye."
+
+"bye"       -> "Good bye.", Idle
+"farewell"  -> *
+"job"       -> "I work in this bank. I can change money for you."
+"name"      -> "I am Eva."
+"time"      -> "It is exactly %T."
+
+@"gen-bank.ndb"
+}

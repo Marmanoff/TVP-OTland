@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="The Oracle" behavior="the oracle.npc" walkradius="0" walkinterval="2000" speed="1" floorchange="0">
+  <look typeex="1448" />
+</npc>

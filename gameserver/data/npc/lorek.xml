@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Lorek" behavior="lorek.npc" walkradius="0" walkinterval="2000" speed="1" floorchange="0">
+  <look type="132" head="19" body="10" legs="38" feet="95" />
+</npc>

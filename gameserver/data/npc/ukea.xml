@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Ukea" behavior="ukea.npc" walkradius="2" walkinterval="2000" speed="5" floorchange="0">
+  <look type="144" head="78" body="58" legs="64" feet="58" />
+</npc>

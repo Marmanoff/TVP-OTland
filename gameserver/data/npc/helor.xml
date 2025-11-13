@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Helor" behavior="helor.npc" walkradius="0" walkinterval="2000" speed="2" floorchange="0">
+  <look type="134" head="57" body="79" legs="95" feet="98" />
+</npc>

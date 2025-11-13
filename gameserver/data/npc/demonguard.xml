@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<npc name="Demonguard" behavior="demonguard.npc" walkradius="0" walkinterval="0" speed="-40" floorchange="0">
+  <look type="131" head="113" body="113" legs="94" feet="113" />
+</npc>

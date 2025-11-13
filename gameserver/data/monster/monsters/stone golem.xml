@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monster name="Stone Golem" nameDescription="a stone golem" race="undead" experience="160" speed="50" manacost="590">
+	<health now="270" max="270" />
+	<look type="67" head="0" body="0" legs="0" feet="0" corpse="2952" />
+	<targetchange chance="0" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag convinceable="1" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" skillfactor="1500" skillnextlevel="100" skilladdcount="1" skill="52" attack="38" />
+	</attacks>
+	<defenses armor="30" defense="25">
+	</defenses>
+	<immunities>
+		<immunity fire="1" />
+		<immunity energy="0" />
+		<immunity poison="1" />
+		<immunity physical="0" />
+		<immunity outfit="0" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="1" />
+		<immunity invisible="0" />
+	</immunities>
+	<loot>
+		<item id="2050" countmax="1" chance="5500" /><!-- torch -->
+		<item id="2509" countmax="1" chance="7000" /><!-- steel shield -->
+		<item id="1294" countmax="4" chance="13000" /><!-- small stone -->
+		<item id="2483" countmax="1" chance="5000" /><!-- scale armor -->
+		<item id="2156" countmax="1" chance="100" /><!-- red gem -->
+		<item id="2166" countmax="1" chance="5000" /><!-- power ring -->
+		<item id="2148" countmax="15" chance="16000" /><!-- gold coin -->
+		<item id="2124" countmax="1" chance="200" /><!-- crystal ring -->
+		<item id="2395" countmax="1" chance="1500" /><!-- carlin sword -->
+	</loot>
+</monster>
