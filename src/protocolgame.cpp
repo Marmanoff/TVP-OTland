@@ -36,12 +36,12 @@ std::tuple<WaitList&, WaitList::iterator, WaitList::size_type> findClient(const 
 
 	auto it = std::find_if(priorityWaitList.begin(), priorityWaitList.end(), fn);
 	if (it != priorityWaitList.end()) {
-		return std::make_tuple(std::ref(priorityWaitList), it, std::distance(it, priorityWaitList.end()) + 1);
+		return std::make_tuple(std::ref(priorityWaitList), it, std::distance(priorityWaitList.begin(), it) + 1);
 	}
 
 	it = std::find_if(waitList.begin(), waitList.end(), fn);
 	if (it != waitList.end()) {
-		return std::make_tuple(std::ref(waitList), it, priorityWaitList.size() + std::distance(it, waitList.end()) + 1);
+		return std::make_tuple(std::ref(waitList), it, priorityWaitList.size() + std::distance(waitList.begin(), it) + 1);
 	}
 
 	return std::make_tuple(std::ref(waitList), waitList.end(), priorityWaitList.size() + waitList.size());
@@ -107,7 +107,7 @@ std::size_t clientLogin(const Player& player)
 		}
 
 		//let them wait a bit longer
-		std::get<1>(result)->second = OTSYS_TIME() + (getTimeout(currentSlot) * 1000);
+		std::get<1>(result)->first = OTSYS_TIME() + (getTimeout(currentSlot) * 1000);
 		return currentSlot;
 	}
 
