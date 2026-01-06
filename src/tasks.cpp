@@ -1,5 +1,5 @@
-// Copyright 2023 The Forgotten Server Authors and Alejandro Mujica for many specific source code changes, All rights reserved.
-// Use of this source code is governed by the GPL-2.0 License that can be found in the LICENSE file.
+// Copyright 2023 The Forgotten Server Authors and Alejandro Mujica for many specific source code changes, All rights
+// reserved. Use of this source code is governed by the GPL-2.0 License that can be found in the LICENSE file.
 
 #include "otpch.h"
 
@@ -10,15 +10,9 @@
 extern Game g_game;
 extern ConfigManager g_config;
 
-Task* createTask(TaskFunc&& f)
-{
-	return new Task(std::move(f));
-}
+Task* createTask(TaskFunc&& f) { return new Task(std::move(f)); }
 
-Task* createTask(uint32_t expiration, TaskFunc&& f)
-{
-	return new Task(expiration, std::move(f));
-}
+Task* createTask(uint32_t expiration, TaskFunc&& f) { return new Task(expiration, std::move(f)); }
 
 void Dispatcher::threadMain()
 {
@@ -32,7 +26,7 @@ void Dispatcher::threadMain()
 		// check if there are tasks waiting
 		taskLockUnique.lock();
 		if (taskList.empty()) {
-			//if the list is empty wait for signal
+			// if the list is empty wait for signal
 			taskSignal.wait(taskLockUnique);
 		}
 		tmpTaskList.swap(taskList);

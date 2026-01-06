@@ -1,5 +1,5 @@
-// Copyright 2023 The Forgotten Server Authors and Alejandro Mujica for many specific source code changes, All rights reserved.
-// Use of this source code is governed by the GPL-2.0 License that can be found in the LICENSE file.
+// Copyright 2023 The Forgotten Server Authors and Alejandro Mujica for many specific source code changes, All rights
+// reserved. Use of this source code is governed by the GPL-2.0 License that can be found in the LICENSE file.
 
 #pragma once
 
@@ -13,61 +13,58 @@ const auto SYSTEM_TIME_ZERO = std::chrono::system_clock::time_point(std::chrono:
 
 class Task
 {
-	public:
-		// DO NOT allocate this class on the stack
-		explicit Task(TaskFunc&& f) : func(std::move(f)) {}
-		Task(uint32_t ms, TaskFunc&& f) :
-			expiration(std::chrono::system_clock::now() + std::chrono::milliseconds(ms)), func(std::move(f)) {}
+public:
+	// DO NOT allocate this class on the stack
+	explicit Task(TaskFunc&& f) : func(std::move(f)) {}
+	Task(uint32_t ms, TaskFunc&& f) :
+	    expiration(std::chrono::system_clock::now() + std::chrono::milliseconds(ms)), func(std::move(f))
+	{}
 
-		virtual ~Task() = default;
-		void operator()() {
-			func();
+	virtual ~Task() = default;
+	void operator()() { func(); }
+
+	void setDontExpire() { expiration = SYSTEM_TIME_ZERO; }
+
+	bool hasExpired() const
+	{
+		if (expiration == SYSTEM_TIME_ZERO) {
+			return false;
 		}
+		return expiration < std::chrono::system_clock::now();
+	}
 
-		void setDontExpire() {
-			expiration = SYSTEM_TIME_ZERO;
-		}
+protected:
+	std::chrono::system_clock::time_point expiration = SYSTEM_TIME_ZERO;
 
-		bool hasExpired() const {
-			if (expiration == SYSTEM_TIME_ZERO) {
-				return false;
-			}
-			return expiration < std::chrono::system_clock::now();
-		}
-
-	protected:
-		std::chrono::system_clock::time_point expiration = SYSTEM_TIME_ZERO;
-
-	private:
-		// Expiration has another meaning for scheduler tasks,
-		// then it is the time the task should be added to the
-		// dispatcher
-		TaskFunc func;
+private:
+	// Expiration has another meaning for scheduler tasks,
+	// then it is the time the task should be added to the
+	// dispatcher
+	TaskFunc func;
 };
 
 Task* createTask(TaskFunc&& f);
 Task* createTask(uint32_t expiration, TaskFunc&& f);
 
-class Dispatcher : public ThreadHolder<Dispatcher> {
-	public:
-		void addTask(Task* task);
+class Dispatcher : public ThreadHolder<Dispatcher>
+{
+public:
+	void addTask(Task* task);
 
-		void shutdown();
+	void shutdown();
 
-		uint64_t getDispatcherCycle() const {
-			return dispatcherCycle;
-		}
+	uint64_t getDispatcherCycle() const { return dispatcherCycle; }
 
-		void threadMain();
+	void threadMain();
 
-		bool beatIOSync = false;
+	bool beatIOSync = false;
 
-	private:
-		std::mutex taskLock;
-		std::condition_variable taskSignal;
+private:
+	std::mutex taskLock;
+	std::condition_variable taskSignal;
 
-		std::vector<Task*> taskList;
-		uint64_t dispatcherCycle = 0;
+	std::vector<Task*> taskList;
+	uint64_t dispatcherCycle = 0;
 };
 
 extern Dispatcher g_dispatcher;
