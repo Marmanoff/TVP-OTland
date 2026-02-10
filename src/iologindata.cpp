@@ -9,7 +9,6 @@
 
 #include <fmt/format.h>
 
-#include "databasetasks.h"
 
 extern ConfigManager g_config;
 extern Game g_game;
@@ -538,6 +537,12 @@ bool IOLoginData::savePlayer(Player* player)
 	Database& db = Database::getInstance();
 	std::ostringstream query;
 
+	// Start transaction - all save operations are atomic
+	DBTransaction transaction;
+	if (!transaction.begin()) {
+		return false;
+	}
+
 	// Update main player data
 	query << "UPDATE `players` SET ";
 	query << "`level` = " << player->level << ',';
@@ -608,11 +613,16 @@ bool IOLoginData::savePlayer(Player* player)
 
 	query << " WHERE `id` = " << player->getGUID();
 
-	g_databaseTasks.addTask(query.str());
+	if (!db.executeQuery(query.str())) {
+		return false;
+	}
 
 	// Save inventory items
-	g_databaseTasks.addTask(fmt::format("DELETE FROM `player_items` WHERE `player_id` = {:d}", player->getGUID()));
+	if (!db.executeQuery(fmt::format("DELETE FROM `player_items` WHERE `player_id` = {:d}", player->getGUID()))) {
+		return false;
+	}
 
+	DBInsert itemsInsert("INSERT INTO `player_items` (`player_id`, `pid`, `sid`, `itemtype`, `count`, `attributes`) VALUES ");
 	int32_t slotId = 0;
 	for (int32_t slot = CONST_SLOT_FIRST; slot <= CONST_SLOT_LAST; slot++) {
 		Item* item = player->inventory[slot];
@@ -625,60 +635,106 @@ bool IOLoginData::savePlayer(Player* player)
 		size_t attrSize;
 		const char* attrData = propWriteStream.getStream(attrSize);
 
-		g_databaseTasks.addTask(fmt::format(
-			"INSERT INTO `player_items` (`player_id`, `pid`, `sid`, `itemtype`, `count`, `attributes`) VALUES ({:d}, {:d}, {:d}, {:d}, {:d}, {:s})",
-			player->getGUID(), slot, slotId++, item->getID(), item->getItemCount(),
-			db.escapeBlob(attrData, attrSize)
-		));
+		query.str(std::string());
+		query << player->getGUID() << ',' << slot << ',' << slotId++ << ',' << item->getID() << ',' << item->getItemCount() << ',' << db.escapeBlob(attrData, attrSize);
+		if (!itemsInsert.addRow(query)) {
+			return false;
+		}
+	}
+	if (!itemsInsert.execute()) {
+		return false;
 	}
 
 	// Save storage values
-	g_databaseTasks.addTask(fmt::format("DELETE FROM `player_storage` WHERE `player_id` = {:d}", player->getGUID()));
+	if (!db.executeQuery(fmt::format("DELETE FROM `player_storage` WHERE `player_id` = {:d}", player->getGUID()))) {
+		return false;
+	}
+
+	DBInsert storageInsert("INSERT INTO `player_storage` (`player_id`, `key`, `value`) VALUES ");
 	for (const auto& [key, value] : player->storageMap) {
-		g_databaseTasks.addTask(fmt::format(
-			"INSERT INTO `player_storage` (`player_id`, `key`, `value`) VALUES ({:d}, {:d}, {:d})",
-			player->getGUID(), key, value
-		));
+		query.str(std::string());
+		query << player->getGUID() << ',' << key << ',' << value;
+		if (!storageInsert.addRow(query)) {
+			return false;
+		}
+	}
+	if (!storageInsert.execute()) {
+		return false;
 	}
 
 	// Save string storage values
-	g_databaseTasks.addTask(fmt::format("DELETE FROM `player_string_storage` WHERE `player_id` = {:d}", player->getGUID()));
+	if (!db.executeQuery(fmt::format("DELETE FROM `player_string_storage` WHERE `player_id` = {:d}", player->getGUID()))) {
+		return false;
+	}
+
+	DBInsert stringStorageInsert("INSERT INTO `player_string_storage` (`player_id`, `key`, `value`) VALUES ");
 	for (const auto& [key, value] : player->stringStorageMap) {
-		g_databaseTasks.addTask(fmt::format(
-			"INSERT INTO `player_string_storage` (`player_id`, `key`, `value`) VALUES ({:d}, {:s}, {:s})",
-			player->getGUID(), db.escapeString(key), db.escapeString(value)
-		));
+		query.str(std::string());
+		query << player->getGUID() << ',' << db.escapeString(key) << ',' << db.escapeString(value);
+		if (!stringStorageInsert.addRow(query)) {
+			return false;
+		}
+	}
+	if (!stringStorageInsert.execute()) {
+		return false;
 	}
 
 	// Save spells
-	g_databaseTasks.addTask(fmt::format("DELETE FROM `player_spells` WHERE `player_id` = {:d}", player->getGUID()));
+	if (!db.executeQuery(fmt::format("DELETE FROM `player_spells` WHERE `player_id` = {:d}", player->getGUID()))) {
+		return false;
+	}
+
+	DBInsert spellsInsert("INSERT INTO `player_spells` (`player_id`, `name`) VALUES ");
 	for (const std::string& spellName : player->learnedInstantSpellList) {
-		g_databaseTasks.addTask(fmt::format(
-			"INSERT INTO `player_spells` (`player_id`, `name`) VALUES ({:d}, {:s})",
-			player->getGUID(), db.escapeString(spellName)
-		));
+		query.str(std::string());
+		query << player->getGUID() << ',' << db.escapeString(spellName);
+		if (!spellsInsert.addRow(query)) {
+			return false;
+		}
+	}
+	if (!spellsInsert.execute()) {
+		return false;
 	}
 
 	// Save VIP list
-	g_databaseTasks.addTask(fmt::format("DELETE FROM `player_viplist` WHERE `player_id` = {:d}", player->getGUID()));
+	if (!db.executeQuery(fmt::format("DELETE FROM `player_viplist` WHERE `player_id` = {:d}", player->getGUID()))) {
+		return false;
+	}
+
+	DBInsert vipInsert("INSERT INTO `player_viplist` (`player_id`, `vip_id`) VALUES ");
 	for (uint32_t vipId : player->VIPList) {
-		g_databaseTasks.addTask(fmt::format(
-			"INSERT INTO `player_viplist` (`player_id`, `vip_id`) VALUES ({:d}, {:d})",
-			player->getGUID(), vipId
-		));
+		query.str(std::string());
+		query << player->getGUID() << ',' << vipId;
+		if (!vipInsert.addRow(query)) {
+			return false;
+		}
+	}
+	if (!vipInsert.execute()) {
+		return false;
 	}
 
 	// Save murders
-	g_databaseTasks.addTask(fmt::format("DELETE FROM `player_murders` WHERE `player_id` = {:d}", player->getGUID()));
+	if (!db.executeQuery(fmt::format("DELETE FROM `player_murders` WHERE `player_id` = {:d}", player->getGUID()))) {
+		return false;
+	}
+
+	DBInsert murdersInsert("INSERT INTO `player_murders` (`player_id`, `timestamp`) VALUES ");
 	for (time_t timestamp : player->murderTimeStamps) {
-		g_databaseTasks.addTask(fmt::format(
-			"INSERT INTO `player_murders` (`player_id`, `timestamp`) VALUES ({:d}, {:d})",
-			player->getGUID(), timestamp
-		));
+		query.str(std::string());
+		query << player->getGUID() << ',' << timestamp;
+		if (!murdersInsert.addRow(query)) {
+			return false;
+		}
+	}
+	if (!murdersInsert.execute()) {
+		return false;
 	}
 
 	// Save depot items
-	g_databaseTasks.addTask(fmt::format("DELETE FROM `player_depotitems` WHERE `player_id` = {:d}", player->getGUID()));
+	if (!db.executeQuery(fmt::format("DELETE FROM `player_depotitems` WHERE `player_id` = {:d}", player->getGUID()))) {
+		return false;
+	}
+
 	for (const auto& [depotId, locker] : player->depotLockerMap) {
 		PropWriteStream propWriteStream;
 		
@@ -694,14 +750,18 @@ bool IOLoginData::savePlayer(Player* player)
 		size_t itemsSize;
 		const char* itemsData = propWriteStream.getStream(itemsSize);
 
-		g_databaseTasks.addTask(fmt::format(
+		if (!db.executeQuery(fmt::format(
 			"INSERT INTO `player_depotitems` (`player_id`, `depot_id`, `items`) VALUES ({:d}, {:d}, {:s})",
 			player->getGUID(), depotId, db.escapeBlob(itemsData, itemsSize)
-		));
+		))) {
+			return false;
+		}
 	}
 
 	// Save conditions
-	g_databaseTasks.addTask(fmt::format("DELETE FROM `player_conditions` WHERE `player_id` = {:d}", player->getGUID()));
+	if (!db.executeQuery(fmt::format("DELETE FROM `player_conditions` WHERE `player_id` = {:d}", player->getGUID()))) {
+		return false;
+	}
 	
 	PropWriteStream condStream;
 	uint32_t conditionCount = 0;
@@ -733,13 +793,15 @@ bool IOLoginData::savePlayer(Player* player)
 		size_t condSize;
 		const char* condData = condStream.getStream(condSize);
 
-		g_databaseTasks.addTask(fmt::format(
+		if (!db.executeQuery(fmt::format(
 			"INSERT INTO `player_conditions` (`player_id`, `conditions`) VALUES ({:d}, {:s})",
 			player->getGUID(), db.escapeBlob(condData, condSize)
-		));
+		))) {
+			return false;
+		}
 	}
 
-	return true;
+	return transaction.commit();
 }
 
 
