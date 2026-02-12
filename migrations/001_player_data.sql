@@ -6,13 +6,14 @@ ALTER TABLE `players`
   ADD COLUMN IF NOT EXISTS `blessings` TINYINT UNSIGNED NOT NULL DEFAULT 0 AFTER `stamina`,
   ADD COLUMN IF NOT EXISTS `save` TINYINT UNSIGNED NOT NULL DEFAULT 1,
   ADD COLUMN IF NOT EXISTS `conditions` BLOB NULL DEFAULT NULL,
+  ADD COLUMN IF NOT EXISTS `unjusts` TEXT NOT NULL DEFAULT '',
   ADD COLUMN IF NOT EXISTS `cap` INT UNSIGNED NOT NULL DEFAULT 40000 AFTER `blessings`;
 
 -- Player storage values (quest progress, etc.)
 CREATE TABLE IF NOT EXISTS `player_storage` (
   `player_id` INT NOT NULL,
-  `key` INT NOT NULL,
-  `value` BIGINT NOT NULL,
+  `key` INT UNSIGNED NOT NULL,
+  `value` INT NOT NULL,
   PRIMARY KEY (`player_id`, `key`),
   CONSTRAINT `player_storage_ibfk_1` FOREIGN KEY (`player_id`) 
     REFERENCES `players` (`id`) ON DELETE CASCADE
@@ -21,9 +22,9 @@ CREATE TABLE IF NOT EXISTS `player_storage` (
 -- Player string storage values
 CREATE TABLE IF NOT EXISTS `player_string_storage` (
   `player_id` INT NOT NULL,
-  `key` VARCHAR(255) NOT NULL,
+  `key` TEXT NOT NULL,
   `value` TEXT NOT NULL,
-  PRIMARY KEY (`player_id`, `key`),
+  PRIMARY KEY (`player_id`, `key`(180)),
   CONSTRAINT `player_string_storage_ibfk_1` FOREIGN KEY (`player_id`) 
     REFERENCES `players` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -45,15 +46,6 @@ CREATE TABLE IF NOT EXISTS `player_viplist` (
   CONSTRAINT `player_viplist_ibfk_1` FOREIGN KEY (`player_id`) 
     REFERENCES `players` (`id`) ON DELETE CASCADE,
   CONSTRAINT `player_viplist_ibfk_2` FOREIGN KEY (`vip_id`) 
-    REFERENCES `players` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- Murder timestamps
-CREATE TABLE IF NOT EXISTS `player_murders` (
-  `player_id` INT NOT NULL,
-  `timestamp` BIGINT NOT NULL,
-  KEY `player_id` (`player_id`),
-  CONSTRAINT `player_murders_ibfk_1` FOREIGN KEY (`player_id`) 
     REFERENCES `players` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

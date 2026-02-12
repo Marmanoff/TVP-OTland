@@ -213,7 +213,7 @@ bool IOLoginData::loadPlayer(Player* player, bool /*initializeScriptFile*/)
 		"`lastlogin`, `lastlogout`, `skull`, `skulltime`, `balance`, `stamina`, `blessings`, `cap`, "
 		"`skill_fist`, `skill_fist_tries`, `skill_club`, `skill_club_tries`, `skill_sword`, `skill_sword_tries`, "
 		"`skill_axe`, `skill_axe_tries`, `skill_dist`, `skill_dist_tries`, `skill_shielding`, `skill_shielding_tries`, "
-		"`skill_fishing`, `skill_fishing_tries`, `conditions` "
+		"`skill_fishing`, `skill_fishing_tries`, `conditions`, `unjusts` "
 		"FROM `players` WHERE `id` = {:d}", player->getGUID()));
 
 	if (!result) {
@@ -222,6 +222,7 @@ bool IOLoginData::loadPlayer(Player* player, bool /*initializeScriptFile*/)
 
 	// Basic player data
 	player->name = result->getString("name");
+	std::string unjustsString = result->getString("unjusts");
 	
 	Group* group = g_game.groups.getGroup(result->getNumber<uint16_t>("group_id"));
 	if (!group) {
@@ -254,7 +255,7 @@ bool IOLoginData::loadPlayer(Player* player, bool /*initializeScriptFile*/)
 	player->mana = result->getNumber<uint32_t>("mana");
 	player->manaMax = result->getNumber<uint32_t>("manamax");
 	player->manaSpent = result->getNumber<uint64_t>("manaspent");
-	player->soul = result->getNumber<uint8_t>("soul");
+	player->soul = static_cast<uint8_t>(result->getNumber<uint16_t>("soul"));
 
 	Town* town = g_game.map.towns.getTown(result->getNumber<uint16_t>("town_id"));
 	if (!town) {
@@ -266,7 +267,7 @@ bool IOLoginData::loadPlayer(Player* player, bool /*initializeScriptFile*/)
 	// Position
 	uint16_t posx = result->getNumber<uint16_t>("posx");
 	uint16_t posy = result->getNumber<uint16_t>("posy");
-	uint8_t posz = result->getNumber<uint8_t>("posz");
+	uint8_t posz = static_cast<uint8_t>(result->getNumber<uint16_t>("posz"));
 	if (posx != 0 && posy != 0 && posz != 0) {
 		player->position = Position(posx, posy, posz);
 		player->loginPosition = player->position;
@@ -282,7 +283,7 @@ bool IOLoginData::loadPlayer(Player* player, bool /*initializeScriptFile*/)
 	player->playerKillerEnd = result->getNumber<time_t>("skulltime");
 	player->bankBalance = result->getNumber<uint64_t>("balance");
 	player->staminaMinutes = result->getNumber<uint16_t>("stamina");
-	player->blessings = result->getNumber<uint8_t>("blessings");
+	player->blessings = static_cast<uint8_t>(result->getNumber<uint16_t>("blessings"));
 	player->capacity = result->getNumber<uint32_t>("cap");
 
 	// Skills
@@ -339,7 +340,7 @@ bool IOLoginData::loadPlayer(Player* player, bool /*initializeScriptFile*/)
 	// Load storage values
 	if ((result = db.storeQuery(fmt::format("SELECT `key`, `value` FROM `player_storage` WHERE `player_id` = {:d}", player->getGUID())))) {
 		do {
-			player->storageMap[result->getNumber<int32_t>("key")] = result->getNumber<int64_t>("value");
+			player->storageMap[result->getNumber<uint32_t>("key")] = result->getNumber<int32_t>("value");
 		} while (result->next());
 	}
 
@@ -379,10 +380,16 @@ bool IOLoginData::loadPlayer(Player* player, bool /*initializeScriptFile*/)
 	}
 
 	// Load murders
-	if ((result = db.storeQuery(fmt::format("SELECT `timestamp` FROM `player_murders` WHERE `player_id` = {:d}", player->getGUID())))) {
-		do {
-			player->murderTimeStamps.push_back(result->getNumber<time_t>("timestamp"));
-		} while (result->next());
+	if (!unjustsString.empty()) {
+		std::stringstream ss(unjustsString);
+		std::string timestampStr;
+		while (std::getline(ss, timestampStr, ',')) {
+			try {
+				player->murderTimeStamps.push_back(std::stoll(timestampStr));
+			} catch (const std::exception&) {
+				// Ignore invalid timestamps
+			}
+		}
 	}
 
 	// Load inventory items
@@ -644,6 +651,15 @@ bool IOLoginData::savePlayer(Player* player)
 	query << "`skill_fishing_tries` = " << player->skills[SKILL_FISHING].tries << ',';
 	query << "`conditions` = " << db.escapeBlob(condData, condSize);
 
+	std::ostringstream unjustsStream;
+	for (auto it = player->murderTimeStamps.begin(); it != player->murderTimeStamps.end(); ++it) {
+		if (it != player->murderTimeStamps.begin()) {
+			unjustsStream << ',';
+		}
+		unjustsStream << *it;
+	}
+	query << ", `unjusts` = " << db.escapeString(unjustsStream.str());
+
 	query << " WHERE `id` = " << player->getGUID();
 
 	if (!db.executeQuery(query.str())) {
@@ -746,22 +762,7 @@ bool IOLoginData::savePlayer(Player* player)
 		return false;
 	}
 
-	// Save murders
-	if (!db.executeQuery(fmt::format("DELETE FROM `player_murders` WHERE `player_id` = {:d}", player->getGUID()))) {
-		return false;
-	}
 
-	DBInsert murdersInsert("INSERT INTO `player_murders` (`player_id`, `timestamp`) VALUES ");
-	for (time_t timestamp : player->murderTimeStamps) {
-		query.str(std::string());
-		query << player->getGUID() << ',' << timestamp;
-		if (!murdersInsert.addRow(query)) {
-			return false;
-		}
-	}
-	if (!murdersInsert.execute()) {
-		return false;
-	}
 
 	// Save depot items
 	if (!db.executeQuery(fmt::format("DELETE FROM `player_depotitems` WHERE `player_id` = {:d}", player->getGUID()))) {
