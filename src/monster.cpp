@@ -822,7 +822,7 @@ void Monster::onIdleStimulus()
 			Target = nullptr;
 		}
 
-		if (attackedCreature && attackedCreature->isInvisible() && !canSeeInvisibility()) {
+		if (attackedCreature && attackedCreature->isInvisible() && !canSeeInvisibility() && attackedCreature != master) {
 			setAttackedCreature(nullptr);
 			Target = nullptr;
 		}
